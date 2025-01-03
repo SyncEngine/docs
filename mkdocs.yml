@@ -1,0 +1,6 @@
+site_name: SyncEngine docs
+repo_url: https://github.com/SyncEngine/SyncEngine-docs
+nav:
+  - Home: index.md
+  - For developers:
+      - Module development: module-development.md
