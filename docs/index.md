@@ -31,21 +31,21 @@ This documentation is your go-to resource for understanding, implementing, and m
 
 ### For Developers
 
--   **Getting Started**: A step-by-step guide to setting up SyncEngine in your environment.
+-   **Developers guide**: A step-by-step guide to setting up SyncEngine in your environment.
 
 -   **API Reference**: Detailed documentation for all available endpoints, methods, and parameters.
 
 -   **Integration Examples**: Ready-to-use code snippets and sample use cases.
 
--   **Advanced Configuration**: Learn about custom plugins, webhooks, and optimization techniques.
+-   **[Module development](dev-docs/module-development.md)**: Learn how to build your custom modules.
 
 ### For Users
 
--   **User Guide**: Simple walkthroughs for managing integrations through the user interface.
+-   **[Getting started](user-docs/getting-started.md)**: Simple walkthroughs for installing and managing integrations through the user interface.
 
--   **Best Practices**: Tips and tricks for effectively managing your API connections.
+-   **[Best Practices](user-docs/best-practices.md)**: Tips and tricks for effectively managing your API connections.
 
--   **FAQs**: Answers to common questions and troubleshooting help.
+-   **[FAQs](user-docs/faq.md)**: Answers to common questions and troubleshooting help.
 
 Both sections are designed to provide the information you need quickly and efficiently, ensuring that you can make the most of SyncEngine with ease.
 
