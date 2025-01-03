@@ -1,7 +1,24 @@
 site_name: SyncEngine docs
+site_url: https://docs.syncengine.io/
+site_description: Project documentation for SyncEngine.
 repo_url: https://github.com/SyncEngine/SyncEngine-docs
+site_author: SyncEngine team
 edit_uri: edit/main/docs/
+copyright: Copyright &copy; <a href="https://syncengine.io">SyncEngine</a>.
+use_directory_urls: false
+extra:
+  generator: false
+
 nav:
-  - Home: index.md
-  - For developers:
-      - Module development: module-development.md
+  - Home: 'index.md'
+  - User docs:
+      - 'Getting started': 'user-docs/getting-started.md'
+      - 'Best practices': 'user-docs/best-practices.md'
+      - 'FAQ': 'user-docs/faq.md'
+  - Developer docs:
+      - 'Module development': 'dev-docs/module-development.md'
+
+plugins:
+  - search
+  - autorefs
+
