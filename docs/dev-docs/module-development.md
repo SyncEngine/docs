@@ -1,6 +1,6 @@
 # Building Modules
-
 Creating a module for the open-source system **SyncEngine** involves structuring your code to align with **SyncEngine's** conventions. This guide outlines the core components of your module and their respective functionalities.
+___
 
 ## Module Structure Overview
 
@@ -19,7 +19,7 @@ AuthorName/ModuleName/
 ├── vendor/
 ```
 
-### 1. **register.php**
+### **register.php**
 
 This file is responsible for autoloading vendor libraries. Typically, it contains the following line:
 
@@ -29,7 +29,7 @@ include __DIR__ . '/vendor/autoload.php';
 This ensures that any external dependencies used by your module are properly loaded.
 > Tip: Generate your autoloader using [Composer](https://getcomposer.org)
 
-### 2. **ModuleName.php (Main Module File)**
+### **ModuleName.php (Main Module File)**
 The ModuleName.php file is the entry point of your module. It defines critical information about the module and contains functions that interact with SyncEngine's lifecycle and actions.
 
 #### Core Properties
@@ -52,7 +52,7 @@ Define the following functions to handle module-specific tasks during its lifecy
 - uninstall: Called when the module is uninstalled. Use this to clean up resources.
 - renderRequest: Used to handle and render specific config or other required info.
 
-### 3. **src/ Directory**
+### **src/ Directory**
 This folder organizes your module's backend logic. It typically includes subdirectories for various functionalities:
 
 - Controllers/: Houses controller classes that mediate between views and models.
@@ -60,7 +60,7 @@ This folder organizes your module's backend logic. It typically includes subdire
 - Webservice/: Contains your webservice(s) that let you connect your system with specific config.
 - Blueprints/: Includes blueprints files to standardize configurations or other structured data.
 
-### 4. **templates/ Directory**
+### **templates/ Directory**
 In this folder you can keep all your specific templates for any config pages or other non **SyncEngine** views.
 Currently supported templating engine is [Twig](https://twig.symfony.com/doc/3.x/templates.html)
 
