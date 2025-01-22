@@ -31,6 +31,10 @@ Tasks and flows can include data processing, conditional branching, integrations
 
 ### 3. Test and Preview
 At any point, you can use SyncEngine’s **Previewer** to test or inspect the automation. The Previewer provides insights into how the automation functions and what outputs it produces. To access the Previewer, press the play button as shown in the interface.
+<figure markdown="span">
+  ![Retrieve task](../img/retrieve-task.png){ width="100%" }
+  <figcaption>SyncEngine's Retrieve task</figcaption>
+</figure>
 
 ## Benefits of the Automations Tab
 - **Flexibility**: Build custom workflows that adapt to your needs.
