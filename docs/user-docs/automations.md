@@ -33,8 +33,41 @@ Tasks and flows can include data processing, conditional branching, integrations
 At any point, you can use SyncEngine’s **Previewer** to test or inspect the automation. The Previewer provides insights into how the automation functions and what outputs it produces. To access the Previewer, press the play button as shown in the interface.
 <figure markdown="span">
   ![Retrieve task](../img/retrieve-task.png){ width="100%" }
-  <figcaption>SyncEngine's Retrieve task</figcaption>
 </figure>
+
+
+### 4. Events Tab
+
+The **Events** tab in SyncEngine’s Automations is where you define what actions should be taken after an automation has finished running. This tab ensures that appropriate follow-up actions are performed based on the outcome of the automation, whether it has run successfully or encountered errors.
+
+#### Purpose of the Events Tab
+After an automation completes its tasks, the system consults the **Events** tab to determine the next steps. This allows you to create automated responses and workflows tailored to the automation’s final state.
+
+#### ^^Key Features of the Events tab^^
+
+**Conditional Tasks Based on Automation State**. The Events tab lets you define separate actions for:
+
+- **On Success Runs**: Tasks to perform when the automation completes successfully.
+- **On Error**: Tasks to handle errors or unexpected outcomes.
+- **On Cancel**: If there is no data, or the data does not meet the requirements. 
+
+**Multi-Task Capability**. You can configure multiple tasks for each state, enabling complex and diverse workflows. For example:
+
+- Sending notifications.
+- Triggering follow-up automations.
+- Logging outcomes in external systems.
+
+<figure markdown="span">
+  ![Retrieve task](../img/events-tab.png){ width="100%" }
+</figure>
+
+#### Example Use Case
+Consider an automation that imports products from an ERP system to e-commerce software:
+
+- **On Success Run**: Update the inventory dashboard and notify the operations team.
+- **On Error**: Automatically email the product owner with details about the error and log the failure in the error tracking system.
+
+___
 
 ## Benefits of the Automations Tab
 - **Flexibility**: Build custom workflows that adapt to your needs.
