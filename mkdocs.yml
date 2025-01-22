@@ -14,6 +14,7 @@ nav:
   - User docs:
       - 'Getting started': 'user-docs/getting-started.md'
       - 'Best practices': 'user-docs/best-practices.md'
+      - 'Connections': 'user-docs/connections.md'
       - 'FAQ': 'user-docs/faq.md'
   - Developer docs:
       - 'Module development': 'dev-docs/module-development.md'
