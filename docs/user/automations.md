@@ -31,9 +31,7 @@ Tasks and flows can include data processing, conditional branching, integrations
 
 ### 3. Test and Preview
 At any point, you can use SyncEngine’s **Previewer** to test or inspect the automation. The Previewer provides insights into how the automation functions and what outputs it produces. To access the Previewer, press the play button as shown in the interface.
-<figure markdown="span">
-  ![Retrieve task](../img/retrieve-task.png){ width="100%" }
-</figure>
+![SyncEngine test and preview](../img/automation/retrieve-task.png)
 
 
 ### 4. Events Tab
@@ -57,9 +55,7 @@ After an automation completes its tasks, the system consults the **Events** tab 
 - Triggering follow-up automations.
 - Logging outcomes in external systems.
 
-<figure markdown="span">
-  ![Retrieve task](../img/events-tab.png){ width="100%" }
-</figure>
+![SyncEngine Events](../img/automation/events-tab.png)
 
 #### Example Use Case
 Consider an automation that imports products from an ERP system to e-commerce software:

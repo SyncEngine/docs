@@ -25,4 +25,4 @@ SyncEngine has an active user community where you can:
 * Discover new modules and integrations.
 * Share insights and best practices.
 * Get help with troubleshooting.
-* Even sell your module on our marketplace 🚀
+* Even sell your module on our marketplace

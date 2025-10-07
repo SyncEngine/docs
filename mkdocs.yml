@@ -1,36 +1,86 @@
-site_name: SyncEngine docs
-site_url: https://docs.syncengine.io/
-site_description: Project documentation for SyncEngine.
-repo_url: https://github.com/SyncEngine/SyncEngine-docs
-site_author: SyncEngine team
-edit_uri: edit/main/docs/
-copyright: Copyright &copy; <a href="https://syncengine.io">SyncEngine</a>.
-use_directory_urls: false
-extra:
-  generator: false
+site_name: SyncEngine Documentation
+site_description: Comprehensive user and developer documentation for SyncEngine — the modular automation and integration platform.
+site_author: SyncEngine Team
+copyright: "© 2025 SyncEngine. All rights reserved."
+
+theme:
+  name: material
+  language: en
+  logo: img/icon-fill.svg
+  favicon: img/favicon.ico
+  features:
+    - navigation.expand
+    - navigation.top
+    - navigation.instant
+    - search.suggest
+    - search.highlight
+    - toc.integrate
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 
 nav:
-  - Home: 'index.md'
-  - User docs:
-      - 'Getting started': 'user-docs/getting-started.md'
-      - 'Best practices': 'user-docs/best-practices.md'
-      - 'SyncEngine tabs':
-          - 'Connections': 'user-docs/connections.md'
-          - 'Automations': 'user-docs/automations.md'
-      - 'FAQ': 'user-docs/faq.md'
-  - Developer docs:
-      - 'Module development': 'dev-docs/module-development.md'
+  - Home: index.md
+  - User Docs:
+      - Installation: user/installation.md
+      - Setup: user/setup.md
+      - Dashboard: user/dashboard.md
+      - Tasks: user/tasks.md
+      - Connections: user/connections.md
+      - Automations: user/automations.md
+      - Flows: user/flows.md
+      - Routines: user/routines.md
+      - Storages: user/storages.md
+      - Best Practices: user/best-practices.md
+      - FAQ: user/faq.md
+  - Developer Docs:
+      - Modules: developer/modules.md
+      - API: developer/api.md
+      - Architecture: developer/architecture.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 plugins:
   - search
-  - autorefs
+  - awesome-pages
+  - minify:
+      minify_html: true
 
-markdown_extensions:
-  - attr_list
-  - md_in_html
-  - pymdownx.blocks.caption
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
+extra:
+  generator: false
+
+extra_css:
+  - css/custom.css
+
+extra_javascript:
+  - js/custom.js
+
+repo_url: https://github.com/SyncEngine/SyncEngine-docs
+repo_name: SyncEngine/SyncEngine-docs
+edit_uri: edit/main/docs/
