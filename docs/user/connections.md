@@ -139,7 +139,6 @@ If your connection test fails:
 
 - Store all secrets in the Vault.
 - Use least-privilege credentials for every connection.
-- Group connections by environment (e.g., `crm.dev.api`, `crm.prod.api`).
 - Reuse connections across multiple automations for consistency.
 - Test connections regularly and update expiring tokens in advance.
 
