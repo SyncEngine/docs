@@ -46,6 +46,28 @@ nav:
       - Storages: user/storages.md
       - Best Practices: user/best-practices.md
       - FAQ: user/faq.md
+  - Task Docs:
+      - Attempt: task/attempt.md
+      - Cache: task/cache.md
+      - Choose: task/choose.md
+      - Extract: task/extract.md
+      - Filter: task/filter.md
+      - Group: task/group.md
+      - Index: task/index.md
+      - Loop: task/loop.md
+      - Map: task/map.md
+      - Merge: task/merge.md
+      - Replace: task/replace.md
+      - Retrieve: task/retrieve.md
+      - Send: task/send.md
+      - Set: task/set.md
+      - Sort: task/sort.md
+      - Split: task/split.md
+      - Store: task/store.md
+      - Template: task/template.md
+      - Trace: task/trace.md
+      - Trigger: task/trigger.md
+      - Wait: task/wait.md
   - Developer Docs:
       - Modules: developer/modules.md
       - API: developer/api.md
