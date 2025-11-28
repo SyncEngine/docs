@@ -1,5 +1,5 @@
 The **Connections** tab in SyncEngine is where all integrations begin.  
-It serves as the central hub for managing external systems, defining credentials, and configuring secure data connections that power your automations.
+It serves as the central hub for managing external systems through webservices, defining credentials, and configuring secure data connections that power your automations.
 
 With a unified interface, you can connect to APIs, file servers, databases, and the local filesystem — allowing SyncEngine to retrieve, transform, and send information across your entire ecosystem.
 
@@ -17,11 +17,11 @@ Use the **Connections** tab to:
 
 ---
 
-## Built-in Connection Types
+## Built-in Connection Webservice Types
 
-SyncEngine ships with a rich set of built-in web service connectors to cover the most common integration needs. Each connector comes with its own configuration options and can be reused across automations.
+SyncEngine ships with a rich set of built-in webservice connectors to cover the most common integration needs. Each connector comes with its own configuration options and can be reused across automations.
 
-| Connection Type | Description |
+| Connection Webservice Type | Description |
 |------------------|-------------|
 | **[SFTP](../webservices/sftp.md)** and **[FTP](../webservices/ftp.md)** | Secure file transfers using SFTP (SSH) or classic FTP. |
 | **[HTTP No Auth](../webservices/http.md)** | Make HTTP requests to endpoints without authentication. |
