@@ -21,26 +21,27 @@ Below is a list of the core tasks available in SyncEngine by default.
 
 | Task | Description |
 |------|--------------|
-| **Cache** | Get or set a value in the context cache. This is useful for storing temporary results between tasks or reusing data in different parts of a flow. |
-| **Choose** | Branch logic that selects different execution paths based on conditions. Similar to “if/else” logic. |
-| **Extract** | Extract a single column or property from each item in your dataset. Great for flattening nested structures. |
-| **Filter** | Filter incoming data based on one or more conditions. Only records that match the criteria continue to the next task. |
-| **Group** | Group data into sets based on shared properties or values. Perfect for aggregations or categorization tasks. |
-| **Index** | Reindex or reorganize your data with a custom index key. Useful for mapping datasets or simplifying lookups. |
-| **Loop** | Iterate over a list of items and execute the following tasks for each one. |
-| **Map** | Map key-value pairs, transform data structures, or rename fields dynamically. |
-| **Merge** | Combine multiple datasets or columns into a single unified structure. |
-| **Replace** | Search for and replace text or values within your data. |
-| **Retrieve** | Retrieve data from a specific connection (e.g., API, database, or storage). Often used as the first task in a flow. |
-| **Send** | Send processed data to a connection. For example, posting to an API or writing to a database. |
-| **Set** | Define or modify custom values in your current dataset or execution context. |
-| **Sort** | Sort your data ascending or descending by one or more keys. |
-| **Split** | Split strings or dataset columns into multiple parts or rows. |
-| **Store** | Get or set a value in a storage container. Storages are long-term containers that persist between runs. |
-| **Template** | Apply a [Twig](https://twig.symfony.com/) template to dynamically modify data, create content, or format messages. |
-| **Trace** | Log the current status, data, or error message. Useful for debugging or tracking data states during execution. |
-| **Trigger** | Trigger another flow independently from the current one. Enables chained or parallel automation. |
-| **Wait** | Pause execution for a defined amount of time before continuing. Ideal for throttling or delayed actions. |
+| **[Attempt](../tasks/attempt,md)** | Execute actions while gracefully handling any errors that may occur. Think of it as a "try-catch" block for your automation workflows. |
+| **[Cache](../tasks/cache.md)** | Get or set a value in the context cache. This is useful for storing temporary results between tasks or reusing data in different parts of a flow. |
+| **[Choose](../tasks/choose.md)** | Branch logic that selects different execution paths based on conditions. Similar to "if/else" logic. |
+| **[Extract](../tasks/extract.md)** | Extract a single column or property from each item in your dataset. Great for flattening nested structures. |
+| **[Filter](../tasks/filter.md)** | Filter incoming data based on one or more conditions. Only records that match the criteria continue to the next task. |
+| **[Group](../tasks/group.md)** | Group data into sets based on shared properties or values. Perfect for aggregations or categorization tasks. |
+| **[Index](../tasks/index.md)** | Reindex or reorganize your data with a custom index key. Useful for mapping datasets or simplifying lookups. |
+| **[Loop](../tasks/loop.md)** | Iterate over a list of items and execute the following tasks for each one. |
+| **[Map](../tasks/map.md)** | Map key-value pairs, transform data structures, or rename fields dynamically. |
+| **[Merge](../tasks/merge.md)** | Combine multiple datasets or columns into a single unified structure. |
+| **[Replace](../tasks/replace.md)** | Search for and replace text or values within your data. |
+| **[Retrieve](../tasks/retrieve.md)** | Retrieve data from a specific connection (e.g., API, database, or storage). Often used as the first task in a flow. |
+| **[Send](../tasks/send.md)** | Send processed data to a connection. For example, posting to an API or writing to a database. |
+| **[Set](../tasks/set.md)** | Define or modify custom values in your current dataset or execution context. |
+| **[Sort](../tasks/sort.md)** | Sort your data ascending or descending by one or more keys. |
+| **[Split](../tasks/split.md)** | Split strings or dataset columns into multiple parts or rows. |
+| **[Store](../tasks/store.md)** | Get or set a value in a storage container. Storages are long-term containers that persist between runs. |
+| **[Template](../tasks/template.md)** | Apply a [Twig](https://twig.symfony.com/) template to dynamically modify data, create content, or format messages. |
+| **[Trace](../tasks/trace.md)** | Log the current status, data, or error message. Useful for debugging or tracking data states during execution. |
+| **[Trigger](../tasks/trigger.md)** | Trigger another flow independently from the current one. Enables chained or parallel automation. |
+| **[Wait](../tasks/wait.md)** | Pause execution for a defined amount of time before continuing. Ideal for throttling or delayed actions. |
 
 ---
 
