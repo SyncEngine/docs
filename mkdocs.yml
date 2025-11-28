@@ -68,6 +68,17 @@ nav:
       - Trace: task/trace.md
       - Trigger: task/trigger.md
       - Wait: task/wait.md
+  - Webservice Connection Docs:
+      - HTTP: webservices/http.md
+      - HTTP Basic Auth: webservices/http-basic.md
+      - HTTP Bearer Token: webservices/http-bearer-token.md
+      - HTTP Multistep: webservices/http-multistep.md
+      - Local Filesystem: webservices/local-filesystem.md
+      - FTP: webservices/ftp.md
+      - SFTP: webservices/sftp.md
+      - SOAP: webservices/soap.md
+      - SOAP Multistep: webservices/soap-multistep.md
+      - SQL: webservices/sql.md
   - Developer Docs:
       - Modules: developer/modules.md
       - API: developer/api.md
