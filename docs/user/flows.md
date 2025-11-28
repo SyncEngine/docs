@@ -1,7 +1,7 @@
 # Flows
 
 **Flows** are the heart of SyncEngine automations.  
-A flow defines how your data moves through a series of actions, known as Routines, to achieve a specific goal.
+A flow defines how your data moves through a series of actions, known as [Routines](routines.md), to achieve a specific goal.
 
 Flows bring structure, logic, and flexibility to your automations, allowing you to design complex processes in a clean and reusable way.
 
@@ -9,7 +9,7 @@ Flows bring structure, logic, and flexibility to your automations, allowing you 
 
 ## What Is a Flow?
 
-A **Flow** is a container that holds one or more **[Routines](routines.md)**. Each routine contains a series of **[Tasks](tasks.md)** that perform actual operations.
+A **Flow** is a container that holds a sequence of steps, each triggering a **[Routine](routines.md)** using the output of the previous step or custom input defined by the step configuration. Each routine contains a series of **[Tasks](tasks.md)** that perform actual operations.
 
 Flows can be triggered by events, schedules, or manually, depending on how your automation is configured.
 
@@ -21,7 +21,7 @@ Think of a Flow as the “pipeline” through which your data travels, from inpu
 
 ![SyncEngine Flow Example](../img/flow/flow-example.png)
 
-Flows execute routines **in sequence** by default, but advanced configurations allow you to run certain routines **in parallel** for better performance.
+Flows execute routines **in sequence** by default, but we are working hard to support advanced configurations that allow you to run routines **in parallel** for better performance and flexibility.
 
 ---
 
@@ -38,7 +38,7 @@ Example:
 
 ---
 
-## Flow Logic
+## Flow Logic _(Planned!)_
 
 Flows can include **conditional logic**, **loops**, and **branching** through tasks such as:
 
