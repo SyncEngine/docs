@@ -1,7 +1,7 @@
 # Routines
 
-**Routines** are the backbone of every Flow in SyncEngine.  
-They define *how* a specific set of actions (Tasks) should be executed to accomplish a logical part of a workflow.
+**Routines** are the backbone of every [Flow](flows.md) in SyncEngine.  
+They define *how* a specific set of actions ([Tasks](tasks.md)) should be executed to accomplish a logical part of a workflow.
 
 Each routine is reusable, modular, and can be called by one or more Flows, giving you incredible flexibility and efficiency.
 
@@ -9,7 +9,7 @@ Each routine is reusable, modular, and can be called by one or more Flows, givin
 
 ## What Is a Routine?
 
-A **Routine** is a sequence collection of **Tasks** that perform a specific function.  
+A **Routine** is a sequence collection of **[Tasks](tasks.md)** that perform a specific function.  
 For example, you might have a routine that retrieves orders from a database, another that filters the results, and another that sends them to an external API.
 
 Routines make complex automations easier to manage and maintain by grouping related actions into logical units.  

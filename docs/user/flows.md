@@ -9,7 +9,7 @@ Flows bring structure, logic, and flexibility to your automations, allowing you 
 
 ## What Is a Flow?
 
-A **Flow** is a container that holds one or more **Routines**. Each routine contains a series of **Tasks** that perform actual operations.
+A **Flow** is a container that holds one or more **[Routines](routines.md)**. Each routine contains a series of **[Tasks](tasks.md)** that perform actual operations.
 
 Flows can be triggered by events, schedules, or manually, depending on how your automation is configured.
 
@@ -90,7 +90,7 @@ In this flow:
 Use the **Preview Function** to test flows safely before activation.  
 You can preview any routine or task and inspect the resulting data step by step.
 
-> **Tip:** Use the `Trace` task inside routines to print debug information directly into the flow log.
+> **Tip:** Use the [`Trace`](../tasks/trace.md) task inside routines to print debug information directly into the flow log.
 
 ---
 

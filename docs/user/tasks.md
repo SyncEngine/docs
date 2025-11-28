@@ -9,7 +9,7 @@ SyncEngine includes a comprehensive set of **core tasks**, and you can extend th
 
 ## What Are Tasks?
 
-In SyncEngine, tasks are executed inside **Routines** and **Flows**.  
+In SyncEngine, tasks are executed inside **[Routines](routines.md)** and **[Flows](flows.md)**.  
 Each task receives data, processes it, and passes the result to the next task in line.  
 This design makes automations flexible, modular, and easy to debug.
 

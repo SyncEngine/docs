@@ -10,7 +10,7 @@ Storages are ideal for saving reusable or shared data, configuration values, and
 ## What Is a Storage?
 
 A **Storage** is a named container that can store any kind of structured data, including text, numbers, JSON, or arrays.  
-Storages can be accessed and modified using the **Store Task** or directly from within the SyncEngine interface.
+Storages can be accessed and modified using the **[Store Task](../tasks/store.md)** or directly from within the SyncEngine interface.
 
 Unlike the **Cache**, which is temporary and cleared after a run, storages persist permanently until you manually delete or update them.
 
