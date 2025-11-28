@@ -22,12 +22,12 @@ Choose the source of data for the automation by selecting one of the following o
 - **Request**: Use this option if you want to send all required data to the automation's endpoint when it is triggered.
 - **Retrieve**: Use this option if the automation should fetch data from an external source. After selecting this option, a default **retrieve** task will appear. You can configure this task to define the external source.
 
-### 2. Add Tasks and Flows
+### 2. Add Actions
 After defining the data source, you can:
 - Add individual tasks that define the specific actions or operations to be performed.
-- Create flows to organize tasks logically and control the execution order.
+- Create flows and routines to organize tasks logically and control the execution order.
 
-Tasks and flows can include data processing, conditional branching, integrations with external services, and more.
+[Tasks](tasks.md), [routines](routines.md) and [Flows](flows.md) can include data processing, conditional branching, integrations with external services, and more.
 
 ### 3. Test and Preview
 At any point, you can use SyncEngine’s **Previewer** to test or inspect the automation. The Previewer provides insights into how the automation functions and what outputs it produces. To access the Previewer, press the play button as shown in the interface.
