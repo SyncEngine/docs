@@ -1,7 +1,7 @@
 # Developing and Installing Modules
 
 Modules are what make **SyncEngine** truly extensible.  
-They allow developers to add new **tasks**, **webservices**, **triggers**, or any custom functionality — all neatly packaged for installation through SyncEngine’s interface.
+They allow developers to add new **tasks**, **webservices**, **triggers**, or any custom functionality, all neatly packaged for installation through SyncEngine’s interface.
 
 This guide explains how to create, structure, and distribute your own modules, and how SyncEngine automatically installs and manages them.
 
@@ -14,7 +14,7 @@ Modules can add new tasks, modify behavior, or even integrate external APIs.
 Once installed, SyncEngine automatically detects and loads them into your workspace.
 
 Modules are installed directly from the **Modules** page inside SyncEngine’s interface.  
-When you upload a module ZIP file, SyncEngine performs the full installation automatically — including any setup or cleanup logic your module defines.
+When you upload a module ZIP file, SyncEngine performs the full installation automatically, including any setup or cleanup logic your module defines.
 
 ---
 
@@ -62,7 +62,7 @@ Once your module is packaged correctly:
 4. SyncEngine will automatically unpack, install, and autoload your module.
 
 During installation, SyncEngine will look for an optional `install()` function inside your module’s main class (usually `Module.php`).  
-Likewise, when you uninstall the module, SyncEngine will trigger the `uninstall()` function if present — perfect for cleanup operations or database adjustments.
+Likewise, when you uninstall the module, SyncEngine will trigger the `uninstall()` function if present, perfect for cleanup operations or database adjustments.
 
 > **Note:** Always include a pre-built `vendor/` folder in your ZIP so that users do **not** need Composer installed on their servers.
 
@@ -197,7 +197,7 @@ Once installed, this task will automatically appear in the task list under the n
 
 - **Optionally implement `install()` and `uninstall()` hooks** for setup and cleanup logic.
 
-- **Test locally** before distribution — once zipped and uploaded, SyncEngine takes care of the rest.
+- **Test locally** before distribution, once zipped and uploaded, SyncEngine takes care of the rest.
 
 ---
 
@@ -211,8 +211,8 @@ Once installed, this task will automatically appear in the task list under the n
 | **4. Zip your module** | Name and structure it as `DeveloperName/ModuleName`.      |
 | **5. Upload to SyncEngine** | Go to *Modules → Upload Module* to install automatically. |
 
-> **Tip:** Distribute your modules as ZIPs — users can install or remove them easily without using Composer or command-line tools.
+> **Tip:** Distribute your modules as ZIPs, users can install or remove them easily without using Composer or command-line tools.
 
 ---
 
-By following this structure, your custom modules will integrate seamlessly with SyncEngine — instantly expanding its capabilities with your own unique tools and logic.
+By following this structure, your custom modules will integrate seamlessly with SyncEngine, instantly expanding its capabilities with your own unique tools and logic.

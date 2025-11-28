@@ -43,8 +43,8 @@ Here’s what each option in the setup screen means:
 | Field             | Description                                                                        |
 |-------------------|------------------------------------------------------------------------------------|
 | **Database URL**  | The connection string to your SyncEngine database. Default uses SQLite.            |
-| **Secret**        | Optional — set a custom unique cryptographic keypreventing token or cookie conflicts across different installations                                   |
-| **Mail Settings** | Optional — configure SMTP if you want SyncEngine to send notifications or reports. |
+| **Secret**        | Optional, set a custom unique cryptographic keypreventing token or cookie conflicts across different installations                                   |
+| **Mail Settings** | Optional, configure SMTP if you want SyncEngine to send notifications or reports. |
 
 All these options can later be modified in your system settings or environment configuration file (`.env.local`) if needed.
 
@@ -54,7 +54,7 @@ All these options can later be modified in your system settings or environment c
 
 Once you press the **Install** button, SyncEngine will initialize the system and prompt you to create an **admin account**.
 
-This account is for **SyncEngine administration only** — it’s not used for any connected services or external systems.
+This account is for **SyncEngine administration only**, it’s not used for any connected services or external systems.
 
 Enter the following:
 

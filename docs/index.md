@@ -37,11 +37,11 @@ If you’re new to SyncEngine, we recommend starting here:
 
 SyncEngine was built with **flexibility**, **transparency**, and **freedom** at its core.
 
-It is an **open-source project**, meaning you can install and host SyncEngine entirely on your own server — giving you full ownership and control over your data.  
+It is an **open-source project**, meaning you can install and host SyncEngine entirely on your own server, giving you full ownership and control over your data.  
 No third party ever sees your information. Your automations, logs, and data remain 100% private and secure.
 
 The **core of SyncEngine is free to use**, and everyone is encouraged to build and share their own modules to extend its functionality.  
-Whether you need a custom connector, a new task type, or a business-specific workflow — you can develop it yourself or use what the community has created.
+Whether you need a custom connector, a new task type, or a business-specific workflow, you can develop it yourself or use what the community has created.
 
 Every automation you build can be monitored, tested, and adjusted in real time.  
 Whether you’re a small team automating a few tasks or a large organization integrating complex systems, SyncEngine scales with you.

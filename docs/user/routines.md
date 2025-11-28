@@ -54,9 +54,9 @@ Example use cases for reusable routines:
 | Setting         | Description                                                                     |
 |-----------------|---------------------------------------------------------------------------------|
 | **Name**        | The routine’s identifier used across flows.                                     |
-| **Description** | Optional — describes what the routine does.                                     |
-| **Conditions**  | Optional — set required parameters to triggering this routine                   |
-| **Schema**      | Optional — set input variables and output schema for a more understandable flow |
+| **Description** | Optional, describes what the routine does.                                     |
+| **Conditions**  | Optional, set required parameters to triggering this routine                   |
+| **Schema**      | Optional, set input variables and output schema for a more understandable flow |
 ---
 
 ## Routine Composition Tips

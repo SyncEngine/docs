@@ -82,4 +82,4 @@ Developers can extend SyncEngine in three primary ways:
 
 ---
 
-> **Note:** SyncEngine’s architecture is designed to evolve. Each component — from flows to modules — can be replaced or extended without breaking the system, ensuring long-term scalability and maintainability.
+> **Note:** SyncEngine’s architecture is designed to evolve. Each component, from flows to modules, can be replaced or extended without breaking the system, ensuring long-term scalability and maintainability.

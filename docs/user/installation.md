@@ -77,7 +77,7 @@ It installs all dependencies, configures your environment, and prepares your ser
    ```
 3. **Follow the prompts:**
 
-   The installer will guide you through configuration steps — including environment setup, database connection, and service initialization.
+   The installer will guide you through configuration steps, including environment setup, database connection, and service initialization.
 
 After completion, you’ll be able to access your SyncEngine installation from your configured domain or IP.
 

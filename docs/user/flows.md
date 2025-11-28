@@ -1,7 +1,7 @@
 # Flows
 
 **Flows** are the heart of SyncEngine automations.  
-A flow defines how your data moves through a series of actions — known as Routines — to achieve a specific goal.
+A flow defines how your data moves through a series of actions, known as Routines, to achieve a specific goal.
 
 Flows bring structure, logic, and flexibility to your automations, allowing you to design complex processes in a clean and reusable way.
 
@@ -13,7 +13,7 @@ A **Flow** is a container that holds one or more **Routines**. Each routine cont
 
 Flows can be triggered by events, schedules, or manually, depending on how your automation is configured.
 
-Think of a Flow as the “pipeline” through which your data travels — from input to output.
+Think of a Flow as the “pipeline” through which your data travels, from input to output.
 
 ---
 
@@ -46,7 +46,7 @@ Flows can include **conditional logic**, **loops**, and **branching** through ta
 - `Loop` – Repeats routines or tasks over datasets.
 - `Trigger` – Starts other flows independently.
 
-These control mechanisms make flows adaptable for any process — from simple synchronization tasks to complex multi-system orchestrations.
+These control mechanisms make flows adaptable for any process, from simple synchronization tasks to complex multi-system orchestrations.
 
 ---
 
@@ -96,7 +96,7 @@ You can preview any routine or task and inspect the resulting data step by step.
 
 ## Best Practices
 
-- Keep flows focused — one purpose per flow.
+- Keep flows focused, one purpose per flow.
 - Reuse routines across flows to avoid duplication.
 - Use clear, descriptive names for each flow and routine.
 - Always test new or modified flows in **Dry Run mode** before going live.

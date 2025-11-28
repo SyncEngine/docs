@@ -1,6 +1,6 @@
 # Dashboard Overview
 
-The **SyncEngine Dashboard** is your command center — where you can monitor automations, view logs, and inspect the health of your system.
+The **SyncEngine Dashboard** is your command center, where you can monitor automations, view logs, and inspect the health of your system.
 
 ![SyncEngine Dashboard](../img/dashboard.png)
 
@@ -42,7 +42,7 @@ Logs are filterable and searchable, enabling quick debugging and auditing of com
 ## The Preview Function
 
 The **Preview Function** is one of SyncEngine’s most powerful developer tools.  
-It allows you to **test and simulate automations safely**, either in a *Dry Run (safe)* mode or a *Live Run* mode — all without leaving the editor.
+It allows you to **test and simulate automations safely**, either in a *Dry Run (safe)* mode or a *Live Run* mode, all without leaving the editor.
 
 ![Start Preview](../img/preview/start-preview.png)
 
@@ -69,7 +69,7 @@ Inside the Previewer, you always have **two run options**:
 - Once configured, you can execute either a **Dry Run (safe)** or a **Run** depending on your testing needs.
 - The preview results show exactly how each task transforms and passes data to the next step.
 
-This gives you full insight into your automation logic — without needing to execute a full production run.
+This gives you full insight into your automation logic, without needing to execute a full production run.
 
 ---
 
@@ -80,7 +80,7 @@ Imagine you’re testing a flow that retrieves user data, filters active users, 
 In Preview Mode:
 
 - **Dry Run (Safe):**  
-  Retrieves real users, applies filters, and shows you the final dataset — but skips sending to the CRM.
+  Retrieves real users, applies filters, and shows you the final dataset, but skips sending to the CRM.
 
 - **Run:**  
   Retrieves, filters, and **sends** the data, allowing you to test follow-up tasks and confirm your API output.
@@ -112,7 +112,7 @@ SyncEngine will use your provided data instead of retrieving it from external co
 > **Tip:** Always start with a **Dry Run (Safe)** when testing new automations. Once you’re confident the logic is correct, switch to **Run** mode to test the full live workflow.
 
 
-The Previewer is your best friend during automation development — providing a safe, interactive environment to experiment, debug, and refine your logic before going live.
+The Previewer is your best friend during automation development, providing a safe, interactive environment to experiment, debug, and refine your logic before going live.
 
 ---
 
@@ -126,4 +126,4 @@ After you’ve explored the dashboard, continue learning about SyncEngine’s wo
 
 ---
 
-> **Note:** The dashboard is central to system transparency. Every run, every task, and every piece of data processed by SyncEngine can be traced right here — giving you full visibility and confidence in your automations.
+> **Note:** The dashboard is central to system transparency. Every run, every task, and every piece of data processed by SyncEngine can be traced right here, giving you full visibility and confidence in your automations.

@@ -1,7 +1,7 @@
 # Tasks Reference
 
 **Tasks** are the building blocks of every SyncEngine automation.  
-Each task performs a specific action — such as filtering data, looping over records, sending data to a connection, or triggering another flow.
+Each task performs a specific action, such as filtering data, looping over records, sending data to a connection, or triggering another flow.
 
 SyncEngine includes a comprehensive set of **core tasks**, and you can extend this list infinitely through external or custom modules.
 
@@ -47,16 +47,16 @@ Below is a list of the core tasks available in SyncEngine by default.
 
 ## Working with Tasks
 
-Every **Task** in SyncEngine is a self-contained action — a specific step your automation performs, configured precisely to your needs.
+Every **Task** in SyncEngine is a self-contained action, a specific step your automation performs, configured precisely to your needs.
 
 Each task comes with its own set of **configuration fields**, accessible directly in SyncEngine's interface without any coding experience!  
 These fields let you define exactly *what* the task does, *where* it sends or retrieves data from, and *how* it transforms information along the way.
 
-Think of tasks as the **workfoce** of your automation — each performing a specific function that, together, create powerful workflows.
+Think of tasks as the **workfoce** of your automation, each performing a specific function that, together, create powerful workflows.
 
-SyncEngine’s **core task library** already provides an extensive foundation — a versatile toolkit capable of handling most automation scenarios right out of the box.  
+SyncEngine’s **core task library** already provides an extensive foundation, a versatile toolkit capable of handling most automation scenarios right out of the box.  
 With a bit of understanding of the systems you’re connecting, you can achieve **virtually anything** using just the built-in tasks.  
-And when you want to go even further, **modules** expand your toolkit with specialized or simplified tasks — making complex integrations effortless.
+And when you want to go even further, **modules** expand your toolkit with specialized or simplified tasks, making complex integrations effortless.
 
 ## Advanced Concepts
 

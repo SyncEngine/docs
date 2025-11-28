@@ -44,7 +44,7 @@ Some connections require temporary tokens, these can also be stored (and updated
 
 ### Vault Storage
 Credentials are stored securely using Symfony Secrets Vault.  
-Click the **+** icon beside a credential field to add a new secret. Provide a descriptive name and the value — this name will then appear as a reusable option in future configurations.
+Click the **+** icon beside a credential field to add a new secret. Provide a descriptive name and the value, this name will then appear as a reusable option in future configurations.
 All credentials are encrypted locally in the Vault, ensuring they remain secure even if your database is ever compromised.
 With Vault encryption, your credentials never leave your SyncEngine host unprotected even in the unlikely event of a database breach, your secrets stay safe and inaccessible.
 
@@ -53,7 +53,7 @@ With Vault encryption, your credentials never leave your SyncEngine host unprote
 1. **Open** the **Connections** tab from the SyncEngine dashboard.
 2. Click **Create new** and choose a connector type (FTP, HTTP, SQL, etc.).
 3. **Configure** the connection fields such as host, credentials, port, and paths.
-4. **Save** the connection — using Vault for secrets where possible.
+4. **Save** the connection, using Vault for secrets where possible.
 5. **Test the connection** to verify connectivity and authentication press the "Connect" button. Once successful, it becomes available for any automation or flow.
 
 ---

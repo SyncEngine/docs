@@ -3,7 +3,7 @@
 **Storages** in SyncEngine are secure, persistent containers used to hold structured data that can be accessed across your automations.  
 They act as your **long-term memory**, allowing flows and routines to save and retrieve information between runs.
 
-Storages are ideal for saving reusable or shared data, configuration values, and results that you want to access later — without relying on external databases or APIs.
+Storages are ideal for saving reusable or shared data, configuration values, and results that you want to access later, without relying on external databases or APIs.
 
 ---
 
@@ -33,17 +33,17 @@ Storages are useful when you need to:
 
 ## Working with Storages
 
-When you create a new **Storage**, one of the first steps is to define its **Data Type** — the kind of information this storage will hold and how SyncEngine will interpret it.
+When you create a new **Storage**, one of the first steps is to define its **Data Type**, the kind of information this storage will hold and how SyncEngine will interpret it.
 
 You can choose from several data types: **Entities**, **Schema**, **Raw**, **Mapper**, or **Generic**.  
 Each type defines a distinct way SyncEngine structures, validates, and interacts with your stored data.
 
 Selecting the correct data type is crucial.  
-A **Schema** storage, for instance, behaves very differently from a **Generic** one — influencing how data is read, indexed, and referenced within your automations.
+A **Schema** storage, for instance, behaves very differently from a **Generic** one, influencing how data is read, indexed, and referenced within your automations.
 
 By choosing the right type, you ensure your storage performs optimally and integrates seamlessly with your workflows, keeping your automations clean, organized, and predictable.
 
-> **Tip:** Take a moment to plan your storage structure before creating it — the correct data type choice will save time and avoid mismatched data behavior later on.
+> **Tip:** Take a moment to plan your storage structure before creating it, the correct data type choice will save time and avoid mismatched data behavior later on.
 
 
 
@@ -62,7 +62,7 @@ By choosing the right type, you ensure your storage performs optimally and integ
 
 - Use storages for small to medium-sized structured data (not big binary files).
 - Organize your storages by function (e.g., `config`, `metadata`, `last_sync`).
-- Avoid storing sensitive credentials — use the system’s secure credential manager instead.
+- Avoid storing sensitive credentials, use the system’s secure credential manager instead.
 - Periodically clean up unused storages to optimize performance.
 
 ---
@@ -80,7 +80,7 @@ Flow: Order Sync
   Routine: Process Orders
     └── Task: Send (ERP API)
   Routine: Update Storage
-    └── Task: Store (set last_sync.timestamp = {{ now() }})
+    └── Task: Store (set last_sync.timestamp = {{ timestamp }})
 ```
 
 This ensures SyncEngine only processes new orders after the last successful sync.
@@ -95,4 +95,4 @@ This ensures SyncEngine only processes new orders after the last successful sync
 
 ---
 
-> **Tip:** Storages turn SyncEngine into a self-contained data hub — capable of remembering context between automations and making decisions based on past executions.
+> **Tip:** Storages turn SyncEngine into a self-contained data hub, capable of remembering context between automations and making decisions based on past executions.
