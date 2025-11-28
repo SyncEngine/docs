@@ -23,15 +23,15 @@ SyncEngine ships with a rich set of built-in web service connectors to cover the
 
 | Connection Type | Description |
 |------------------|-------------|
-| **SFTP and FTP** | Secure file transfers using SFTP (SSH) or classic FTP. |
-| **HTTP No Auth** | Make HTTP requests to endpoints without authentication. |
-| **HTTP Basic Auth** | Access endpoints protected by basic username/password credentials. |
-| **HTTP Bearer Token** | Authenticate with a static bearer token (e.g., API key, JWT). |
-| **HTTP Auth Server** | Authenticate via an external authorization server that issues tokens dynamically. |
-| **Local Filesystem** | Read or write files directly on the SyncEngine host. |
-| **SOAP** | Integrate with SOAP-based services using WSDL definitions. |
-| **SOAP Multistep Server** | Support complex SOAP workflows with multiple chained requests. |
-| **SQL** | Connect to databases (MySQL, PostgreSQL, SQLite, MSSQL, etc.) for structured data exchange. |
+| **[SFTP](../webservices/sftp.md)** and **[FTP](../webservices/ftp.md)** | Secure file transfers using SFTP (SSH) or classic FTP. |
+| **[HTTP No Auth](../webservices/http.md)** | Make HTTP requests to endpoints without authentication. |
+| **[HTTP Basic Auth](../webservices/http-basic.md)** | Access endpoints protected by basic username/password credentials. |
+| **[HTTP Bearer Token](../webservices/http-bearer-token.md)** | Authenticate with a static bearer token (e.g., API key, JWT). |
+| **[HTTP Auth Server](../webservices/http-multistep.md)** | Authenticate via an external authorization server that issues tokens dynamically. |
+| **[Local Filesystem](../webservices/local-filesystem.md)** | Read or write files directly on the SyncEngine host. |
+| **[SOAP](../webservices/soap.md)** | Integrate with SOAP-based services using WSDL definitions. |
+| **[SOAP Multistep Server](../webservices/soap-multistep.md)** | Support complex SOAP workflows with multiple chained requests. |
+| **[SQL](../webservices/sql.md)** | Connect to databases (MySQL, PostgreSQL, SQLite, MSSQL, etc.) for structured data exchange. |
 
 > **Tip:** Install external modules to unlock even more connection types (for example, CRM or cloud service APIs).
 
