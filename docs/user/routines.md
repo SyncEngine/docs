@@ -9,10 +9,10 @@ Each routine is reusable, modular, and can be called by one or more Flows, givin
 
 ## What Is a Routine?
 
-A **Routine** is a collection of **Tasks** that perform a specific function within a Flow.  
+A **Routine** is a sequence collection of **Tasks** that perform a specific function.  
 For example, you might have a routine that retrieves orders from a database, another that filters the results, and another that sends them to an external API.
 
-Routines make complex automations easier to manage and maintain by grouping related actions into logical units.
+Routines make complex automations easier to manage and maintain by grouping related actions into logical units.  
 
 ---
 
