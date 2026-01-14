@@ -1,23 +1,48 @@
 # Welcome to SyncEngine
 
-**SyncEngine** is a powerful, modular automation and integration platform designed to connect, transform, and synchronize data between systems — effortlessly.
+SyncEngine is a modular automation and data synchronization engine designed for building reliable, transparent, and
+high-performance integrations between systems.
 
-Whether you’re building advanced automation flows, connecting third-party APIs, or orchestrating entire business processes, SyncEngine provides the performance, flexibility, and transparency you need.
+It combines the flexibility of custom integrations with a structured execution model that provides previews,
+execution history, and deep observability out of the box.
 
----
+SyncEngine is built for people who care not just that an integration runs, but why, how, and with what data it ran.
+
+Whether you’re building advanced automation flows, connecting third-party APIs, or orchestrating entire business
+processes, SyncEngine provides the performance, flexibility, and transparency you need.
 
 ## What is SyncEngine?
 
-SyncEngine is an **open and extensible automation framework** built for developers and system integrators.  
-It lets you connect multiple systems, define your own data flows, and run automations with precision and reliability.
+SyncEngine is a modular automation framework that lets you define, execute, and inspect data flows between systems, 
+running as a self-hosted service or managed platform.
 
-Key highlights:
+At its core, it provides:
 
-- **Powerful Flows** – Create advanced workflows with multiple routines and decision logic.
-- **Reusable Routines** – Group common actions and reuse them across different flows.
-- **Visual Dashboard** – Track every run and inspect detailed logs to understand exactly what’s happening.
-- **Dry-Run & Preview** – Test safely before deploying to production.
-- **Expandable by Design** – Add your own connections, tasks, and modules to extend SyncEngine infinitely.
+- Explicit automation flows composed of reusable routines and tasks
+- Preview and live execution modes
+- Structured traces that record execution history
+- An extensible architecture for both prebuilt modules and custom logic
+
+You can use SyncEngine to:
+
+- Synchronize data between platforms (e.g. webshops, PIMs, ERPs, CRMs)
+- Orchestrate complex, multi-step business processes
+- Build robust integrations without reinventing logging, retries, and execution tracking
+- Replace fragile custom scripts with a maintainable integration framework
+
+## Key Capabilities
+
+- **Flows & Routines**  
+Build automations from reusable building blocks with predictable execution.
+- **Preview & Live Execution Modes**  
+Inspect data and behavior before running an automation live.
+- **Execution History (Traces)**  
+Every run is recorded with inputs, outputs, decisions, and metadata.
+Trace retention is configurable and automatically managed.
+- **Built-in Observability**  
+Understand what happened, when it happened, and why.
+- **Extensible by Design**  
+Add custom tasks or install modules without modifying Core.
 
 ---
 
@@ -33,30 +58,6 @@ If you’re new to SyncEngine, we recommend starting here:
 
 ---
 
-## Why SyncEngine?
-
-SyncEngine was built with **flexibility**, **transparency**, and **freedom** at its core.
-
-It is an **open-source project**, meaning you can install and host SyncEngine entirely on your own server, giving you full ownership and control over your data.  
-No third party ever sees your information. Your automations, logs, and data remain 100% private and secure.
-
-The **core of SyncEngine is free to use**, and everyone is encouraged to build and share their own modules to extend its functionality.  
-Whether you need a custom connector, a new task type, or a business-specific workflow, you can develop it yourself or use what the community has created.
-
-Every automation you build can be monitored, tested, and adjusted in real time.  
-Whether you’re a small team automating a few tasks or a large organization integrating complex systems, SyncEngine scales with you.
-
-### Key Benefits
-
-- **Open Source** – Run SyncEngine on your own infrastructure and keep your data private, or use our [hosting service](https://syncengine.io).
-- **No Hidden Logic** – Every action is traceable through detailed logs.
-- **Human-Friendly Configuration** – Manage everything from a clean and intuitive interface.
-- **Developer-First** – Fully compatible with Composer and easily extendable with custom modules.
-- **Secure & Isolated** – All data processing runs safely within your environment.
-
-
----
-
 ## Documentation Overview
 
 The documentation is divided into two main sections:
@@ -68,12 +69,31 @@ The documentation is divided into two main sections:
 
 ## Contributing
 
-SyncEngine thrives on community input!  
+Bug reports 🐛, improvements ✨ and ideas 💡 are very welcome!  
 If you’d like to improve the docs, report issues, or contribute modules, visit our GitHub repositories:
 
 - [SyncEngine Core](https://github.com/SyncEngine/SyncEngine)
 - [SyncEngine Docker](https://github.com/SyncEngine/docker)
 - [SyncEngine Installer](https://github.com/SyncEngine/installer)
+
+### Join the Team
+
+Help us shape the future of Secure, Scalable and Automated Data Synchronization!
+Please contact us at [info@syncengine.io](mailto:info@syncengine.io)
+
+---
+
+## Why SyncEngine?
+
+Many automation tools focus on getting something running as quickly as possible.
+They often trade long-term clarity, debuggability, and performance for convenience.
+
+SyncEngine takes a different approach:
+
+- It treats execution history as a first-class concept, not just logs.
+- It makes previewing and live execution explicit choices.
+- It favors predictable, inspectable behavior over hidden automation.
+- It is designed to handle recurring and bulk synchronizations reliably.
 
 ---
 
