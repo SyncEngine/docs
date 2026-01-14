@@ -97,7 +97,20 @@ SyncEngine takes a different approach:
 
 ---
 
-## License Comparison
+## Licensing & Commercial Sustainability
+
+SyncEngine is [fair-code](https://faircode.io) distributed under a **SyncEngine Core License**
+for self-hosted use, personal projects, and client-specific integrations.
+This license is inspired by the Sustainable Use License and the Business Source License.
+
+Offering the software as SaaS or managed hosted service requires a **Commercial / Enterprise License**.
+
+Our licensing model exists to ensure the platform can be sustainably maintained and improved,
+while preventing commercial free-riding that would undermine long-term development.
+
+For full details, see [Core License](https://github.com/SyncEngine/SyncEngine/blob/master/LICENSE.md) and [Commercial License](https://github.com/SyncEngine/SyncEngine/blob/master/LICENSE_COMMERCIAL.md).  
+
+### License Comparison
 
 The Core License is designed for developers, agencies, and companies
 who use SyncEngine as part of their own systems or client projects,
