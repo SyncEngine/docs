@@ -97,6 +97,40 @@ SyncEngine takes a different approach:
 
 ---
 
+## License Comparison
+
+The Core License is designed for developers, agencies, and companies
+who use SyncEngine as part of their own systems or client projects,
+without offering SyncEngine itself as a hosted or multi-tenant service.
+
+If you want to offer SyncEngine as a public SaaS, managed hosting
+platform, or large-scale multi-tenant solution, a Commercial or
+Enterprise License is required.
+
+This licensing model ensures long-term sustainability of the project
+while remaining friendly to integrators, consultants, and embedded
+use cases.
+
+The table below highlights the practical differences between the
+SyncEngine Core License and the Commercial / Enterprise License.
+
+| Feature / Use Case                         | Core License                         | Commercial / Enterprise License |
+|-------------------------------------------|--------------------------------------|---------------------------------|
+| Personal / learning use                   | Allowed                              | Allowed                          |
+| Agency / client-specific deployments      | Allowed (per client)                 | Allowed                          |
+| Internal business applications            | Allowed                              | Allowed                          |
+| Embedded use inside a SaaS application    | Allowed (not exposed as standalone)  | Allowed                          |
+| Public SaaS offering of SyncEngine        | ❌ Not allowed                       | ✅ Allowed                       |
+| Multi-tenant deployments                  | ❌ Not allowed                       | ✅ Allowed                       |
+| Managed hosting / PaaS offerings          | ❌ Not allowed                       | ✅ Allowed                       |
+| Competing SaaS platform                   | ❌ Not allowed                       | Restricted / separate agreement |
+| Automated provisioning / deployment       | ❌ Not allowed                       | ✅ Allowed                       |
+| Enterprise-only features or modules       | Limited                              | ✅ Allowed                       |
+| Modules Marketplace participation         | Optional                             | Optional                         |
+| Commercial support / SLA                  | Not included                         | Optional / contractual           |
+
+---
+
 ## Learn More
 
 - [Installation Guide](user/installation.md)
