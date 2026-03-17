@@ -1,7 +1,7 @@
 site_name: SyncEngine Documentation
 site_description: Comprehensive user and developer documentation for SyncEngine — the modular automation and integration platform.
 site_author: SyncEngine Team
-copyright: "© 2025 SyncEngine. All rights reserved."
+copyright: "© 2026 SyncEngine. All rights reserved."
 
 theme:
   name: material
