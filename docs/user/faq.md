@@ -23,7 +23,7 @@ Thank you for being part of our journey and helping us stay independent!
 
 **Q: How does SyncEngine handle user privacy?**
 
-**A:** SyncEngine is an [open-source](https://opensource.com/resources/what-open-source) project and designed with privacy in mind, giving you complete control over your data. By installing it on your own server, you ensure that all data remains securely in your possession, avoiding third-party hosting or reliance on external services.
+**A:** SyncEngine is a [fair-code](https://faircode.io) distributed project and designed with privacy in mind, giving you complete control over your data. By installing it on your own server, you ensure that all data remains securely in your possession, avoiding third-party hosting or reliance on external services.
 
 **Q: Is my data secure on SyncEngine's managed hosting?**
 

@@ -68,7 +68,7 @@ nav:
       - Trace: tasks/trace.md
       - Trigger: tasks/trigger.md
       - Wait: tasks/wait.md
-  - Webservice Connection Docs:
+  - Webservice Docs:
       - HTTP: webservices/http.md
       - HTTP Basic Auth: webservices/http-basic.md
       - HTTP Bearer Token: webservices/http-bearer-token.md
