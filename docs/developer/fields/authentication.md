@@ -16,3 +16,21 @@ Webservice-auth configuration field. Selects a webservice auth type and renders 
     'type' => 'authentication',
 ]
 ```
+
+## Additional Examples
+
+```php
+'authentication' => [
+    'label' => $this->trans('Authentication'),
+    'type' => 'authentication',
+    'query' => ['enabled' => true],
+]
+```
+
+```php
+'authentication' => [
+    'type' => 'authentication',
+    'webserviceTypes' => $types,
+    'help' => $this->trans('Configure auth and optional connect handshake'),
+]
+```

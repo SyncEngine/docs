@@ -12,3 +12,13 @@ UI helper field for spacing or horizontal rule.
     'size' => 2,
 ]
 ```
+
+## Additional Examples
+
+```php
+'spacer' => [
+    'type' => 'separator',
+    'line' => false,
+    'size' => 3,
+]
+```

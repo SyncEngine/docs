@@ -18,3 +18,22 @@ Selects a codec type and optionally shows codec-specific config fields.
     'view' => 'full',
 ]
 ```
+
+## Additional Examples
+
+```php
+'request_codec' => [
+    'label' => $this->trans('Request codec'),
+    'type' => 'codec',
+    'direction' => 'encode',
+    'compact' => true,
+]
+```
+
+```php
+'response_codec' => [
+    'label' => $this->trans('Response codec'),
+    'type' => 'codec',
+    'filters' => ['module' => 'core'],
+]
+```

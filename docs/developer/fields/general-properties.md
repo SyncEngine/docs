@@ -34,7 +34,7 @@ The renderer supports composition patterns beyond a single `type`:
 - `wizard` or `pages`: Render child configs as paged navigation.
 - `fields`: Inline child fields group (same level context).
 - `nested`: Nested field object with its own `Fields` state object.
-- `inline`: Layout hint for grouped/nested fields.
+- `inline`: Use inline/grid layout for grouped/nested fields.
 - `wrap`: Force wrapping in a `FieldContainer` card.
 - `tags`: Scoped tag context overrides for nested structures.
 
@@ -65,7 +65,14 @@ Field with nested config:
 ```php
 'response' => [
     'label' => $this->trans('Response data'),
-    'nested' => $this->getResponseFields(),
+    'nested' => [
+        'field_1' => [
+            // .. Field config, stored as `response.field_1`
+        ],
+        'field_2' => [
+            // .. Field config, stored as `response.field_2"
+        ]
+    ],
 ]
 ```
 
@@ -90,6 +97,129 @@ Repeater with actions:
         'disable',
         'delete',
     ],
-    'fieldset' => $this->getAuthStepFields(),
+    'fieldset' => [
+        'repeated_field_1' => [
+            // .. Field config, stored as `response.[index].repeated_field_1`
+        ],
+        'repeated_field_2' => [
+            // .. Field config, stored as `response.[index].repeated_field_2"
+        ]
+    ],
+]
+```
+
+## Advanced Composition Examples
+
+Nested with local inline fields and conditional children:
+
+```php
+'send' => [
+    'label' => $this->trans('Send current data'),
+    'type' => 'switch',
+    'fields' => [
+        'transport' => [
+            'label' => $this->trans('Transport'),
+            'type' => 'select',
+            'choices' => [
+                'custom' => $this->trans('Manual'),
+                'body' => $this->trans('Body'),
+                'headers' => $this->trans('Headers'),
+                'query' => $this->trans('Query'),
+            ],
+            'conditions' => ['send' => true], // Show if "send" has a non-empty value.
+        ],
+    ],
+]
+```
+
+Complex tabbed repeater item (request/response/actions), based on multistep auth:
+
+```php
+'authorization' => [
+    'type' => 'repeater',
+    'actions' => ['disable', 'delete'],
+    'fieldset' => [
+        '' => [
+            'tabs' => [
+                'request' => [
+                    'label' => $this->trans('Request'),
+                    'nested' => [
+                        'url' => ['type' => 'text', 'taggable' => true],
+                        'method' => ['type' => 'select', 'choices' => ['GET' => 'GET', 'POST' => 'POST']],
+                        'headers' => ['type' => 'params', 'taggable' => true],
+                    ],
+                ],
+                'response' => [
+                    'label' => $this->trans('Response'),
+                    'nested' => [
+                        'format' => ['type' => 'select', 'choices' => ['json' => 'JSON', 'xml' => 'XML']],
+                        'tags' => [
+                            'type' => 'grid',
+                            'sortable' => true,
+                            'columns' => ['param' => 'Param', 'tag' => 'Tag', 'expiration' => 'Expiration'],
+                        ],
+                    ],
+                ],
+                'actions' => [
+                    'label' => $this->trans('Actions'),
+                    'nested' => [
+                        'success' => ['type' => 'select', 'choices' => ['' => 'Next', 'skip' => 'Skip', 'stop' => 'Stop']],
+                        'error' => ['type' => 'select', 'choices' => ['' => 'Previous', 'restart' => 'Restart', 'stop' => 'Stop']],
+                    ],
+                ],
+            ],
+        ],
+    ],
+]
+```
+
+Wizard/page-style structure for step-by-step setup:
+
+```php
+'setup' => [
+    'wizard' => [
+        'connection' => [
+            'label' => $this->trans('Connection'),
+            'nested' => [
+                'host' => ['type' => 'text', 'required' => true],
+                'authentication' => ['type' => 'authentication'],
+            ],
+        ],
+        'request' => [
+            'label' => $this->trans('Request'),
+            'nested' => [
+                'endpoint' => ['type' => 'text', 'taggable' => true],
+                'method' => ['type' => 'select', 'choices' => ['GET' => 'GET', 'POST' => 'POST']],
+                'body' => ['type' => 'params', 'formats' => ['choices' => ['json' => 'JSON']]],
+            ],
+        ],
+        'response' => [
+            'label' => $this->trans('Response'),
+            'nested' => [
+                'format' => ['type' => 'select', 'choices' => ['json' => 'JSON', 'xml' => 'XML']],
+                'schema' => ['type' => 'schema', 'sortable' => true],
+            ],
+        ],
+    ],
+]
+```
+
+Nested tag-scope override and conditional visibility:
+
+```php
+'response' => [
+    'label' => $this->trans('Response mapping'),
+    'tags' => [
+        'response' => '_input',
+        'variables' => '_input',
+    ],
+    'nested' => [
+        'enabled' => ['type' => 'toggle'],
+        'map' => [
+            'type' => 'mapper',
+            'choices' => 'schema',
+            'conditions' => ['enabled' => true],
+        ],
+    ],
 ]
 ```

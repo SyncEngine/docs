@@ -19,3 +19,23 @@ Selects one entity and optionally renders config fields for that entity.
     'actions' => ['edit', 'create'],
 ]
 ```
+
+## Additional Examples
+
+```php
+'storage' => [
+    'label' => $this->trans('Storage'),
+    'type' => 'entity',
+    'entity' => 'storage',
+    'config' => 'entity:fields',
+]
+```
+
+```php
+'connection' => [
+    'type' => 'entity',
+    'entity' => 'connection',
+    'query' => ['where' => ['type' => 'http']],
+    'actions' => ['edit', 'create', 'config'],
+]
+```

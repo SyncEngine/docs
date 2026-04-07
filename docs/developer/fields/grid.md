@@ -1,6 +1,6 @@
 # Grid Field (`type: grid`)
 
-Tabular editor for key/value rows and structured rows.
+Grid based editor for key/value rows and structured rows.
 
 ## Typical Props
 
@@ -21,5 +21,26 @@ Tabular editor for key/value rows and structured rows.
         'find' => $this->trans('Find'),
         'replace' => $this->trans('Replace'),
     ],
+]
+```
+
+## Additional Examples
+
+```php
+'headers' => [
+    'type' => 'grid',
+    'columns' => [
+        'key' => $this->trans('Header'),
+        'value' => $this->trans('Value'),
+    ],
+    'sortable' => true,
+]
+```
+
+```php
+'schema_map' => [
+    'type' => 'grid',
+    'indexed' => 'column',
+    'columns' => [],
 ]
 ```

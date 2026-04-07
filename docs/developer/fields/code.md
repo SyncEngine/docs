@@ -5,7 +5,7 @@ CodeMirror editor with optional language extension and tag insertion.
 ## Typical Props
 
 - `language`
-- `basicSetup`
+- `basicSetup` // CodeMirror options.
 - `taggable`
 - `contained`
 
@@ -15,6 +15,25 @@ CodeMirror editor with optional language extension and tag insertion.
 'template' => [
     'label' => $this->trans('Template'),
     'type' => 'code',
+    'taggable' => true,
+]
+```
+
+## Additional Examples
+
+```php
+'script' => [
+    'label' => $this->trans('Transform script'),
+    'type' => 'code',
+    'language' => 'javascript',
+    'basicSetup' => ['lineNumbers' => true],
+]
+```
+
+```php
+'payload' => [
+    'type' => 'code',
+    'contained' => true,
     'taggable' => true,
 ]
 ```

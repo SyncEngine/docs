@@ -20,3 +20,23 @@ Default text-like field used by task configs (`text`, `number`, password-like ty
     'help' => $this->trans('Nested keys are supported'),
 ]
 ```
+
+## Additional Examples
+
+```php
+'timeout' => [
+    'label' => $this->trans('Request timeout'),
+    'type' => 'number',
+    'placeholder' => '30',
+    'postfix' => 'seconds',
+]
+```
+
+```php
+'value_template' => [
+    'label' => $this->trans('Value template'),
+    'type' => 'text',
+    'placeholder' => '{*value*}',
+    'taggable' => true,
+]
+```

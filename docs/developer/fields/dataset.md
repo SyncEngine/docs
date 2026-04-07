@@ -2,6 +2,8 @@
 
 Data editor that can show as JSON code or grid-like controls depending on `type`.
 
+UNSTABLE, INTERNALY USE ONLY
+
 ## Typical Props
 
 - `type` (`mapper`, `fields`, or generic dataset)

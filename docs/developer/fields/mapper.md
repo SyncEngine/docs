@@ -2,6 +2,8 @@
 
 Maps source keys to target keys. Can run in simple grid mode or configurable mode.
 
+UNSTABLE, INTERNALY USE ONLY
+
 ## Typical Props
 
 - `choices` (schema/object source)

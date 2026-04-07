@@ -8,7 +8,6 @@ Repeatable list of entity references with optional per-item config/actions.
 - `query`, `choices`
 - `columns`
 - `actions`, `create`
-- `itemProps`, `itemCallbacks`, `itemActions`, `itemToolbar`, `itemHeader`
 - `sortable`, `max`
 
 ## Example
@@ -19,5 +18,25 @@ Repeatable list of entity references with optional per-item config/actions.
     'type' => 'entities',
     'entity' => 'connection',
     'sortable' => true,
+]
+```
+
+## Additional Examples
+
+```php
+'related' => [
+    'type' => 'entities',
+    'entity' => 'storage',
+    'actions' => ['create', 'edit', 'delete'],
+    'columns' => ['info' => ['badge' => 'Storage #{{id}}']],
+]
+```
+
+```php
+'connections' => [
+    'type' => 'entities',
+    'entity' => 'connection',
+    'query' => ['where' => ['enabled' => true]],
+    'max' => 3,
 ]
 ```

@@ -6,7 +6,7 @@ Parameter editor that can switch between grid mode and code mode with format sup
 
 - `columns`
 - `customizable`
-- `formats` (format choices and optional extra format-specific fields)
+- `formats` (format choices for UI)
 - `taggable`, `sortable`
 
 ## Example
@@ -16,6 +16,34 @@ Parameter editor that can switch between grid mode and code mode with format sup
     'label' => $this->trans('Request header'),
     'type' => 'params',
     'collapsed' => true,
+    'taggable' => true,
+]
+```
+
+## Additional Examples
+
+```php
+'query' => [
+    'type' => 'params',
+    'customizable' => true,
+    'formats' => [ // Add format selection for UI
+        'name' => 'format',
+        'choices' => [
+            'json' => 'JSON',
+            'xml' => 'XML'
+        ],
+    ],
+]
+```
+
+```php
+'body' => [
+    'type' => 'params',
+    'columns' => [
+        'key' => 'Key',
+        'value' => 'Value'
+    ],
+    'sortable' => true,
     'taggable' => true,
 ]
 ```

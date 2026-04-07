@@ -15,6 +15,34 @@ Generic repeatable block renderer for custom fieldsets.
 'authorization' => [
     'type' => 'repeater',
     'actions' => ['disable', 'delete'],
-    'fieldset' => $this->getAuthStepFields(),
+    'fieldset' => [
+        // Repeater fields.
+    ],
+]
+```
+
+## Additional Examples
+
+```php
+'steps' => [
+    'type' => 'repeater',
+    'sortable' => true,
+    'max' => 10,
+    'fieldset' => [
+        'name' => ['type' => 'text'],
+        'enabled' => ['type' => 'toggle'],
+    ],
+]
+```
+
+```php
+'requests' => [
+    'type' => 'repeater',
+    'actions' => [
+        // Custom React request handler
+        'run' => ['type' => 'request', 'props' => ['type' => 'connection', 'action' => 'send']],
+        'disable',
+        'delete',
+    ],
 ]
 ```

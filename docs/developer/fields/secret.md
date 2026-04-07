@@ -17,3 +17,13 @@ Secret selector/input hybrid. Supports selecting vault secrets or custom direct 
     'customizable' => true,
 ]
 ```
+
+## Additional Examples
+
+```php
+'password' => [
+    'label' => $this->trans('Password'),
+    'type' => 'secret',
+    'customizable' => false,
+]
+```

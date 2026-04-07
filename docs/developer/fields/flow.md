@@ -2,6 +2,8 @@
 
 Visual flow/graph editor based on React Flow (`@xyflow/react`).
 
+UNSTABLE, INTERNALY USE ONLY
+
 ## Typical Props
 
 - `entity`
@@ -19,5 +21,22 @@ Flow values are node-like objects, typically carrying `_ref`, optional `target`,
     'label' => $this->trans('Flow'),
     'type' => 'flow',
     'entity' => 'task',
+]
+```
+
+## Additional Examples
+
+```php
+'flow' => [
+    'type' => 'flow',
+    'entity' => 'routine',
+    'spacing' => 140,
+]
+```
+
+```php
+'flow' => [
+    'type' => 'flow',
+    'preview' => true, // Allow preview modal
 ]
 ```

@@ -16,3 +16,21 @@ Selects a column type and renders column-specific config fields.
     'type' => 'column',
 ]
 ```
+
+## Additional Examples
+
+```php
+'column_type' => [
+    'label' => $this->trans('Column transformer'),
+    'type' => 'column',
+    'compact' => true,
+]
+```
+
+```php
+'column_type' => [
+    'type' => 'column',
+    'filters' => ['module' => 'core'],
+    'view' => 'full',
+]
+```

@@ -20,3 +20,18 @@ Single-choice selector rendered via check/radio controls.
     ],
 ]
 ```
+
+## Additional Examples
+
+```php
+'transport' => [
+    'label' => $this->trans('Transport'),
+    'type' => 'radio',
+    'inline' => true,
+    'choices' => [
+        'body' => 'Body',
+        'query' => 'Query',
+        'headers' => 'Headers'
+    ],
+]
+```
