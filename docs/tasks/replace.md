@@ -32,8 +32,8 @@ Specifies which data to perform replacements on.
 
 Choose the replacement method:
 
-- **Replace text**: Simple text find-and-replace
-- **Replace with regular expression**: Use regex patterns
+- **Replace text** (`text`): Simple text find-and-replace
+- **Replace with regular expression** (`regex`): Use regex patterns for complex replacements
 
 ### Text / Regex to find
 

@@ -38,10 +38,8 @@ Specifies which part of your data contains the list you want to filter.
 
 Choose how to apply the filter based on your conditions:
 
-- **Keep valid rows**: Keeps items that **match** the conditions (removes non-matching items)
-- **Keep invalid rows**: Keeps items that **don't match** the conditions (removes matching items)
-
-Use "Keep invalid rows" when you want to identify and keep the exceptions rather than the normal cases.
+- **Keep valid rows** (`valid`): Keeps items that **match** the conditions (removes non-matching items)
+- **Keep invalid rows** (`invalid`): Keeps items that **don't match** the conditions (removes matching items). Use when you want to identify and keep the exceptions rather than the normal cases.
 
 ### Conditions
 
@@ -66,6 +64,13 @@ The source is **customizable**, allowing you to reference any data point.
 - The current item is available as `{{ row }}` in your conditions
 - The current item's position/key is available as `{{ index }}`
 - You can use dynamic tags in condition values
+
+At runtime, each condition row typically uses:
+
+- `key`
+- `operator`
+- `compare`
+- optional `source`
 
 **Example conditions:**
 - `{{ row.status }}` equals `"active"` - Keep only active items

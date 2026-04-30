@@ -88,10 +88,10 @@ Use in triggered workflow as `{{ variables.api_endpoint }}`
 
 Choose what type of workflow to trigger:
 
-- **Automation**: Trigger a complete automation (with connections, batching, etc.)
-- **Flow**: Execute a reusable flow
-- **Routine**: Execute a routine workflow
-- **Tasks**: Execute a custom sequence of tasks defined in this trigger
+- **Automation** (`automation`): Trigger a complete automation (with connections, batching, etc.)
+- **Flow** (`flow`): Execute a reusable flow
+- **Routine** (`routine`): Execute a routine workflow
+- **Tasks** (`tasks`): Execute a custom sequence of tasks defined in this trigger
 
 ### Automation
 

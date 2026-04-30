@@ -42,8 +42,8 @@ Specifies which part of your current data to store or where to place retrieved d
 
 Choose the operation to perform:
 
-- **Set storage**: Save data to persistent storage
-- **Get storage**: Retrieve data from persistent storage
+- **Set storage** (`set`): Save data to persistent storage
+- **Get storage** (`get`): Retrieve data from persistent storage
 
 ### Storage
 
@@ -77,14 +77,9 @@ The path within the storage where data will be saved or retrieved. Use dot notat
 
 Choose how to handle the data if something already exists at the storage path:
 
-- **Replace**: Completely replace existing data with new data
-- **Merge**: Combine new data with existing (for objects/arrays)
-- **Append**: Add new data to existing as an array item
-
-**When to use each:**
-- **Replace**: Update a counter, store latest value, refresh data
-- **Merge**: Add new properties to objects, combine arrays
-- **Append**: Build lists, accumulate items over time
+- **Replace** (`replace`): Completely replace existing data with new data. Use for updating counters, storing latest values, or refreshing data.
+- **Merge** (`merge`): Combine new data with existing (for objects/arrays). Use to add new properties or combine arrays.
+- **Append** (`append`): Add new data to existing as an array item. Use for building lists or accumulating items over time.
 
 ### Not found action
 

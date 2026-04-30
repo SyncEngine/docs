@@ -45,9 +45,9 @@ Whether to create a new data collection if target data is scalar (single value) 
 
 Choose what to set:
 
-- **Set column values**: Manually define field names and values
-- **Set schema**: Apply a schema definition to structure data
-- **Set both**: Apply both schema and manual values
+- **Set column values** (`params`): Manually define field names and values
+- **Set schema** (`schema`): Apply a schema definition to structure data
+- **Set both** (`both`): Apply both schema and manual values
 
 ### Schema
 
@@ -60,6 +60,8 @@ Select a schema to apply. Schemas define field names, types, and validation rule
 **Type**: Repeater field | **Conditional**: Only when Set method is "Set column values" or "Set both"
 
 Define fields to set. Each column includes:
+
+At runtime, these rows are stored in the task's top-level `params` field.
 
 #### Column key / name
 

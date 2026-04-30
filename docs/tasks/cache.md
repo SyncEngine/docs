@@ -23,9 +23,9 @@ Use the Cache task when you need to:
 
 Choose what you want to do with the cache:
 
-- **Set cache**: Store a value in the cache
-- **Get cache**: Retrieve a previously stored value and add it to your current data
-- **Clear cache**: Remove a value from the cache
+- **Set cache** (`set`): Store a value in the cache
+- **Get cache** (`get`): Retrieve a previously stored value and add it to your current data
+- **Clear cache** (`clear`): Remove a value from the cache
 
 ### Source
 
@@ -33,8 +33,8 @@ Choose what you want to do with the cache:
 
 Choose where the value comes from:
 
-- **Set from data**: Use data from the current step's output
-- **Manual value**: Enter a specific value directly
+- **Set from data** (`data`): Use data from the current step's output
+- **Manual value** (`manual`): Enter a specific value directly
 
 ### Key / Column name
 
@@ -83,14 +83,9 @@ The unique identifier for your cached value. This is the name you'll use to acce
 
 Choose how to handle the value if something is already cached with the same tag:
 
-- **Replace**: Completely replace the old value with the new one
-- **Merge**: Combine the new value with the old value (useful for objects/arrays)
-- **Append**: Add the new value to the end of the existing value (useful for lists)
-
-**When to use each:**
-- **Replace**: Updating a counter, storing latest value
-- **Merge**: Combining objects, adding new properties to existing data
-- **Append**: Building lists, accumulating items across iterations
+- **Replace** (`replace`): Completely replace the old value with the new one. Use for updating counters or storing latest values.
+- **Merge** (`merge`): Combine the new value with the old value (useful for objects/arrays). Use for combining objects or adding new properties to existing data.
+- **Append** (`append`): Add the new value to the end of the existing value (useful for lists). Use for building lists or accumulating items across iterations.
 
 ### Not found action
 

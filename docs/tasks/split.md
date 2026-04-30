@@ -31,9 +31,9 @@ Specifies which part of your data contains the value to split.
 
 Choose the split operation:
 
-- **Split value**: Split a string into an array using a separator
-- **Split into column keys**: Take an array and create separate fields for each item  
-- **Split value and split into column keys**: Split string, then distribute to separate fields
+- **Split value** (`value`): Split a string into an array using a separator
+- **Split into column keys** (`key`): Take an array and create separate fields for each item  
+- **Split value and split into column keys** (`both`): Split string, then distribute to separate fields
 
 ### Column key split method
 
@@ -41,8 +41,8 @@ Choose the split operation:
 
 Choose how to name the new fields:
 
-- **Custom names**: Manually specify the name for each field
-- **Indexed name**: Auto-generate field names using a pattern
+- **Custom names** (`columns`): Manually specify the name for each field
+- **Indexed name** (`indexed`): Auto-generate field names using a pattern
 
 ### Column key names
 

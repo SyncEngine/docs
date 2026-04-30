@@ -39,8 +39,8 @@ Specifies which part of your data contains the list you want to iterate over.
 
 Choose how items are processed:
 
-- **Row**: Process items one at a time (each item individually)
-- **Batches**: Process items in groups of a specified size
+- **Row** (empty string): Process items one at a time (each item individually)
+- **Batches** (`batch`): Process items in groups of a specified size
 
 **When to use each method:**
 
@@ -69,9 +69,9 @@ The number of items to process together in each batch.
 
 Choose what to execute for each item (or batch):
 
-- **Flow**: Run a complete flow for each item
-- **Routine**: Execute a routine for each item
-- **Tasks**: Run a set of tasks for each item
+- **Flow** (`flow`): Run a complete flow for each item
+- **Routine** (`routine`): Execute a routine for each item
+- **Tasks** (`tasks`): Run a set of tasks for each item
 
 **When to use each action type:**
 

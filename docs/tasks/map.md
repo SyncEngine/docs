@@ -31,9 +31,8 @@ Specifies which data to transform.
 
 Choose what to map:
 
-- **Map column names**: Rename fields/columns
-- **Map column values**: Transform values based on mapping rules
-- **Map both**: Map names, then map values
+- **Map column names** (`key`): Rename fields/columns
+- **Map column values** (`value`): Transform values based on mapping rules
 
 ### Columns to map
 
@@ -186,3 +185,10 @@ Result: Both column names and values are transformed.
 - Apply on "all sub values" processes data recursively
 - Value type filtering targets specific data types
 - Dynamic tags supported in all mapping fields
+
+## Runtime Config Notes
+
+- The main config fields are top-level task fields such as `key`, `action`, and `map`
+- `map.map_source` accepts:
+  - **`manual` | Manual mappings**: Use the mappings defined directly in the task config.
+  - **`storage` | Storage mappings**: Load mappings from a storage entity.

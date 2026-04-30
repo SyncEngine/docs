@@ -43,8 +43,8 @@ The field name to sort by. Use dot notation for nested fields.
 
 Sort direction:
 
-- **Ascending**: A-Z, 0-9, oldest to newest
-- **Descending**: Z-A, 9-0, newest to oldest
+- **Ascending** (`ascending`): A-Z, 0-9, oldest to newest
+- **Descending** (`descending`): Z-A, 9-0, newest to oldest
 
 ### Keep index association?
 

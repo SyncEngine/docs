@@ -29,9 +29,9 @@ The target location for the merged result. Use dot notation for nested paths.
 
 Choose what to merge:
 
-- **Merge values**: Combines array values into a single string (vertical merge)
-- **Merge columns**: Combines multiple columns into one (horizontal merge)
-- **Merge both**: Merges columns, then joins resulting values into a string
+- **Merge values** (`merge_values`): Combines array values into a single string (vertical merge)
+- **Merge columns** (`merge_columns`): Combines multiple columns into one (horizontal merge)
+- **Merge both** (`merge_both`): Merges columns, then joins resulting values into a string
 
 ### Key merge method
 

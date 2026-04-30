@@ -24,12 +24,8 @@ Use the Trace task when you need to:
 
 Choose the severity level of the trace:
 
-- **Log message**: Creates an informational log entry (automation continues, marked as successful)
-- **Error message**: Creates an error entry and marks the automation as failed
-
-**When to use each:**
-- **Log**: Track progress, record events, debug information
-- **Error**: Intentionally fail the automation, flag critical issues
+- **Log message** (`log`): Creates an informational log entry (automation continues, marked as successful). Use to track progress, record events, or debug information.
+- **Error message** (`error`): Creates an error entry and marks the automation as failed. Use to intentionally fail the automation or flag critical issues.
 
 ### Message
 
