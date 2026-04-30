@@ -22,10 +22,14 @@ Choose the source of data for the automation by selecting one of the following o
 - **Request**: Use this option if you want to send all required data to the automation's endpoint when it is triggered.
 - **Retrieve**: Use this option if the automation should fetch data from an external source. After selecting this option, a default **retrieve** task will appear. You can configure this task to define the external source.
 
+The source defines how data enters the automation before any actions are executed.
+
 ### 2. Add Actions
 After defining the data source, you can:
 - Add individual tasks that define the specific actions or operations to be performed.
 - Create flows and routines to organize tasks logically and control the execution order.
+
+Actions define what happens after the source data has been prepared.
 
 [Tasks](tasks.md), [routines](routines.md) and [Flows](flows.md) can include data processing, conditional branching, integrations with external services, and more.
 

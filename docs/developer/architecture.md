@@ -25,12 +25,24 @@ SyncEngine is built around five key architectural principles:
 Here’s what happens when an automation runs:
 
 1. **Trigger Activated** – A schedule, event, or manual trigger starts the automation.
-2. **Flow Loaded** – The automation’s configuration and routines are retrieved from the database.
-3. **Routine Execution** – Each routine runs sequentially (or in parallel, if configured).
-4. **Task Execution** – Tasks process data, calling modules or external APIs as needed.
-5. **Data Transformation** – Data is filtered, mapped, grouped, and transformed.
-6. **Result Delivery** – The final dataset is sent to its destination connection.
+2. **Source Resolution** – The automation resolves its configured source and prepares the initial input data.
+3. **Action Loading** – The automation loads the configured actions, such as tasks, a routine, or a flow.
+4. **Routine / Flow Execution** – Routines and flows run in sequence, passing transformed data forward.
+5. **Task Execution** – Tasks process data, call modules or external APIs, and update the execution context.
+6. **Result Delivery** – The final dataset is returned and may also be sent to a destination connection.
 7. **Logging & Storage** – Every step is logged and stored for traceability.
+
+### Execution Outcomes
+
+Execution success is based on the full execution context, not only on whether individual actions produced data or sent requests.
+
+This means an automation can still perform useful work and end with `success = false` if one or more tasks recorded errors during execution.
+
+When reviewing an execution result, inspect:
+
+- the final returned data
+- the execution errors and logs
+- any outbound request traces that are relevant to the flow
 
 ---
 
