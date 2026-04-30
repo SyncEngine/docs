@@ -211,6 +211,8 @@ What should happen if the cache tag doesn't exist:
 
 **Remember cache is temporary**: Cache only exists during the automation run. Use Storage for persistent data.
 
+**Write the Value You Need**: Cache stores exactly what you set. For derived values such as running counters, compute the next value first and then write it back.
+
 **Avoid tag name conflicts**: Use unique, specific names to prevent accidentally overwriting cached values.
 
 **Use nested paths for organization**: Group related cache values like `api.token`, `api.endpoint`, `api.response`.

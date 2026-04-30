@@ -159,6 +159,8 @@ Combines both operations: splits string, then distributes to separate fields.
 
 **Choose the Right Action**: Split value for parsing strings, split into keys for distributing arrays, split both for parsing and distributing in one step.
 
+**Use Loop for Row Changes**: If your current data is a collection and each row needs its own split fields, wrap the Split task in a Loop task so it runs once per row.
+
 **Use Column Types**: Apply trimming or type conversion to clean up split values.
 
 **Custom vs Indexed Names**: Use custom names for known structures (first_name, last_name), indexed names for variable-length data.

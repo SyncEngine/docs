@@ -146,6 +146,18 @@ Define the tasks to execute for each item. Build your processing logic inline wi
 
 ## Use Cases
 
+### Transform Each Row in a Collection
+
+**Scenario**: Split or map fields on every row in a list.
+
+**Configuration:**
+- **Key / Column name**: leave empty when the root data is already the list
+- **Loop method**: Row
+- **Action**: Tasks
+- **Tasks**: Add tasks such as Split, Map, Set, or Retrieve that should run once per row
+
+**Result**: Each item is processed individually and written back into the original collection.
+
 ### Send Email to Each Customer
 
 **Scenario**: Send a personalized email to each customer in a list.
