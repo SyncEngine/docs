@@ -65,6 +65,47 @@ curl -X POST https://your-syncengine-domain/api/endpoint/invoice_generate/execut
 
 This request starts the automation with endpoint name `invoice_generate` and passes the provided data to the first task.
 
+### `execute` vs `schedule`
+
+SyncEngine supports two trigger actions on `/api/endpoint/{endpoint}/{action}`.
+
+| Action | Purpose | Admission Check | Typical Response |
+|---|---|---|---|
+| `execute` | Run now in the current request/response flow. | `canRunNow()` | Full execution result payload (`success`, `message`, optional `data`/errors). |
+| `schedule` | Accept request and hand off to background processing (Messenger). | `canAcceptNewRequests()` and scheduler availability | Immediate ack-style response (`success: true`) after scheduling. |
+
+Behavior notes:
+
+- `execute` is best for direct/synchronous API consumers that need immediate results.
+- `schedule` is best for async integration and burst traffic.
+- In queued mode, `schedule` can accept new requests while a run is active and persist them for ordered execution.
+- Mode policy is applied when scheduling; already scheduled/queued work is not retroactively cancelled by a later mode switch.
+
+Examples:
+
+```bash
+curl -X POST https://your-syncengine-domain/api/endpoint/invoice_generate/execute \
+  -H "Authorization: Bearer YOUR_API_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"invoice_id": 12345}'
+```
+
+```bash
+curl -X POST https://your-syncengine-domain/api/endpoint/invoice_generate/schedule \
+  -H "Authorization: Bearer YOUR_API_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"invoice_id": 12345}'
+```
+
+Optional delayed scheduling:
+
+```bash
+curl -X POST "https://your-syncengine-domain/api/endpoint/invoice_generate/schedule?delay=300" \
+  -H "Authorization: Bearer YOUR_API_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"invoice_id": 12345}'
+```
+
 ---
 
 ## Listing Available Endpoints
@@ -116,7 +157,7 @@ When triggering automations, the API provides structured JSON feedback.
 
 ## Summary
 
-- Each automation defines an **endpoint name** for triggering via `/api/endpoint/{endpoint}/execute`.
+- Each automation defines an **endpoint name** for triggering via `/api/endpoint/{endpoint}/execute` or `/api/endpoint/{endpoint}/schedule`.
 - `/api/endpoint` lists all available automations with their endpoints.
 - API Tokens are required for authentication and can be restricted by IP or expiration.
 - SyncEngine uses Symfony’s security framework for role-based and IP-based access control.
