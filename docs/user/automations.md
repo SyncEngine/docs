@@ -1,4 +1,4 @@
-# Automations Tab
+# Automations
 
 The **Automations** tab is one of the most essential features in SyncEngine, enabling you to create and manage powerful workflows. This tab allows you to design automations tailored to your needs by specifying inputs, data sources, and tasks.
 
@@ -67,9 +67,36 @@ Consider an automation that imports products from an ERP system to e-commerce so
 - **On Success Run**: Update the inventory dashboard and notify the operations team.
 - **On Error**: Automatically email the product owner with details about the error and log the failure in the error tracking system.
 
+
+### 5. Execution Settings
+
+Each automation has an execution mode that controls what happens when multiple requests arrive close together.
+
+| Mode | Behavior |
+|---|---|
+| **Single** | Only one active run is allowed. New incoming requests are rejected while a run is active. |
+| **Parallel** | Multiple runs can execute at the same time. New incoming requests are accepted immediately. |
+| **Queued** | Only one run executes at a time, but new incoming requests are accepted and queued for later execution. |
+
+#### How mode changes behave
+
+Mode changes are **forward-looking**:
+
+- They affect new incoming requests from that point onward.
+- They do not retroactively cancel work that was already scheduled/queued.
+- If you need to stop an active run, use the run stop/kill controls in the system.
+
+#### Scheduling and trace behavior
+
+When a run is accepted by the scheduler, SyncEngine creates a trace record first and then dispatches the run to background processing.
+
+- Every dispatched run has a trace ID.
+- In queued mode, requests that cannot start immediately are stored as queued traces and executed in order.
+- Traces provide the authoritative audit trail for run state transitions (scheduled, running, success, failed, stopped, etc.).
+
 ___
 
-## Benefits of the Automations Tab
+## Benefits of the Automations
 - **Flexibility**: Build custom workflows that adapt to your needs.
 - **Scalability**: Handle complex integrations and large-scale tasks with ease.
 - **User-Friendly Testing**: The Previewer simplifies debugging and ensures your automation works as expected.
