@@ -58,6 +58,30 @@ This allows it to handle large volumes of data without blocking the main thread.
 
 > **Tip:** You can configure your queue transport in interface at "System > Processes" .
 
+### Automation Execution Modes
+
+Run admission is decided when scheduling a run:
+
+- **`single`**: allow one active run, reject new requests while active.
+- **`parallel`**: allow concurrent runs.
+- **`queued`**: allow one active run, persist incoming requests as queued traces.
+
+Mode switches are not retroactive queue cancellation. Already queued/scheduled runs are still processed; only new incoming requests use the new mode policy.
+
+### Scheduling and Processing Lifecycle
+
+At a high level, a run follows this lifecycle:
+
+1. `schedule()` receives the request and context.
+2. A `TraceModel` is created/attached and persisted.
+3. Scheduler decides immediate dispatch vs queued trace persistence (mode-dependent).
+4. `AutomationBatch` message is dispatched with automation/trace identifiers and request payload.
+5. `AutomationBatchHandler` loads the trace, restores request context, and calls `execute()`.
+6. `execute()` updates trace status/iteration state and may schedule continuation batches for iterators.
+7. When a run finishes, the next queued trace (if any) is dispatched.
+
+Key invariant used by the runtime: background execution requires a valid trace identifier, so run state remains traceable end-to-end.
+
 ---
 
 ## Extending SyncEngine
