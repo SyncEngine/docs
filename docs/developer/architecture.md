@@ -78,9 +78,21 @@ At a high level, a run follows this lifecycle:
 4. `AutomationBatch` message is dispatched with automation/trace identifiers and request payload.
 5. `AutomationBatchHandler` loads the trace, restores request context, and calls `execute()`.
 6. `execute()` updates trace status/iteration state and may schedule continuation batches for iterators.
-7. When a run finishes, the next queued trace (if any) is dispatched.
+7. When a run finishes, the next iteration batch (see below) or the next queued trace (if any) is dispatched.
 
 Key invariant used by the runtime: background execution requires a valid trace identifier, so run state remains traceable end-to-end.
+
+### Iterator Continuations
+
+When iterator mode is enabled on an automation, one trace can span multiple scheduled batches:
+
+1. First execution starts the trace and advances iteration to batch `1`.
+2. If the current result size reaches the configured limit, execution marks the trace as scheduled and queues a continuation.
+3. Continuation messages execute the same trace and advance iteration (`2`, `3`, ...).
+4. Iteration metadata (index, offset, limit, current) is derived from trace state, not global automation state.
+5. When a batch no longer reaches the iterator limit, iterator state is finalized and the trace completes.
+
+This keeps each multi-batch run consistent and auditable as a single trace timeline.
 
 ---
 
