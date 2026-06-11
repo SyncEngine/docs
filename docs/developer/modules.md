@@ -142,11 +142,11 @@ class Datatools extends ModuleModel
 
 namespace SyncEngine\Module\JohnDoe\DataTools\Task;
 
-use SyncEngine\Model\TaskModel;
-use SyncEngine\Structure\Data\ConfigData;
-use SyncEngine\Service\ExecuteContext;
-use SyncEngine\Service\ExecuteData;
 use SyncEngine\Exception\ExecuteException;
+use SyncEngine\Model\TaskModel;
+use SyncEngine\Runtime\ExecuteContext;
+use SyncEngine\Runtime\ExecuteData;
+use SyncEngine\Structure\Data\ConfigData;
 
 class UppercaseTask implements TaskModel
 {    
