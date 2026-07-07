@@ -9,7 +9,9 @@ SyncEngine's core github can be found [HERE](https://github.com/SyncEngine/SyncE
 
 To install currently used run the following plugins:
 ```
+pip install pymdown-extensions
 pip install mkdocs-redirects
+pip install mkdocs-material
 pip install mkdocs-autorefs
 pip install mkdocs-awesome-pages-plugin  
 pip install mkdocs-minify-plugin    
