@@ -114,7 +114,7 @@ Developers can extend SyncEngine in three primary ways:
 |-------|-------------------------------------------------|
 | Framework | [Symfony 7+](https://symfony.com/)              |
 | Backend Language | PHP 8.3+                                        |
-| Frontend | Vue.js (with Tailwind CSS)                      |
+| Frontend | React (with Bootstrap 5.3+)                     |
 | Database | SQLite, MySQL, or PostgreSQL                    |
 | Caching | Redis or filesystem                             |
 | Queueing | Symfony Messenger (Doctrine or Redis transport) |
