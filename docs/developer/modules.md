@@ -1,7 +1,7 @@
 # Developing and Installing Modules
 
 Modules are what make **SyncEngine** truly extensible.  
-They allow developers to add new **tasks**, **webservices**, **triggers**, or any custom functionality, all neatly packaged for installation through SyncEngine’s interface.
+They allow developers to add new **tasks**, **webservices**, **blueprints** (trigger, schema, routine, etc.), or any custom functionality, all neatly packaged for installation through SyncEngine’s interface.
 
 This guide explains how to create, structure, and distribute your own modules, and how SyncEngine automatically installs and manages them.
 
