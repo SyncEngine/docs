@@ -155,12 +155,96 @@ This configuration ensures that:
 
 When triggering automations, the API provides structured JSON feedback.
 
+## REST API (Entity CRUD)
+
+SyncEngine exposes a REST API for managing core entities (Automations, Flows, Routines, Steps, Traces, Connections, Storages).
+
+### Supported Entities
+
+`automation`, `connection`, `flow`, `routine`, `step`, `storage`
+
+### List Entities
+
+```
+GET /api/rest/v1/{entity}?limit=100&offset=0&search=query&where[field]=value
+```
+
+Returns a JSON array of normalized entities. Max 100 per request.
+
+### Get Entity
+
+```
+GET /api/rest/v1/{entity}/{id}
+```
+
+Returns a single normalized entity.
+
+### Create Entity
+
+```
+POST /api/rest/v1/{entity}
+Content-Type: application/json
+
+{
+  "ref": "my_entity",
+  "name": "My Entity",
+  "description": "Description",
+  "config": { ... },
+  "data": { ... }
+}
+```
+
+Returns HTTP 201 with the normalized entity. Unknown fields are rejected with HTTP 400.
+
+### Update Entity
+
+```
+PUT /api/rest/v1/{entity}/{id}
+PATCH /api/rest/v1/{entity}/{id}
+Content-Type: application/json
+
+{
+  "name": "Updated",
+  "config": { ... }
+}
+```
+
+Returns HTTP 200 with the normalized entity.
+
+### Delete Entity
+
+```
+DELETE /api/rest/v1/{entity}/{id}
+```
+
+Returns HTTP 200 on success.
+
+### Example
+
+```bash
+# List automations
+curl -X GET https://your-syncengine-domain/api/rest/v1/automation \
+  -H "Authorization: Bearer YOUR_API_TOKEN"
+
+# Create a routine
+curl -X POST https://your-syncengine-domain/api/rest/v1/routine \
+  -H "Authorization: Bearer YOUR_API_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "ref": "sync_routine",
+    "name": "Sync routine",
+    "description": "Syncs data between systems",
+    "config": { "tasks": [] }
+  }'
+```
+
 ## Summary
 
 - Each automation defines an **endpoint name** for triggering via `/api/endpoint/{endpoint}/execute` or `/api/endpoint/{endpoint}/schedule`.
 - `/api/endpoint` lists all available automations with their endpoints.
 - API Tokens are required for authentication and can be restricted by IP or expiration.
-- SyncEngine uses Symfony’s security framework for role-based and IP-based access control.
+- SyncEngine uses Symfony's security framework for role-based and IP-based access control.
 - Request data can be passed directly or retrieved within the automation.
+- REST API (`/api/rest/v1/{entity}`) provides CRUD for core entities.
 
 By using the SyncEngine API, developers can securely integrate and automate external systems with minimal configuration.
