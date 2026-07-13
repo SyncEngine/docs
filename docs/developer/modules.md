@@ -23,19 +23,21 @@ When you upload a module ZIP file, SyncEngine performs the full installation aut
 Every module ZIP must follow this exact structure:
 
 ```
-DEVELOPERNAME/
+VENDORNAME/
  └── MODULENAME/
       ├── composer.json
       ├── vendor/
+      ├── register.php
       └── src/
+          ├── Module.php
           ├── Task/
           │    └── YourTask.php
           ├── Webservice/
-          ├── Event/
-          └── Module.php
+          ├── Blueprint/
+          └── Codec/
 ```
 
-The **outer folder** should contain your developer name, and the **inner folder** your module name.  
+The **outer folder** should contain your vendor/developer name, and the **inner folder** your module name.  
 This is required so SyncEngine can properly identify and map the module.
 
 Example structure:
@@ -45,7 +47,9 @@ JohnDoe/
  └── DataTools/
       ├── composer.json
       ├── vendor/
+      ├── register.php
       └── src/
+          ├── Module.php
           └── Task/
                └── UppercaseTask.php
 ```
