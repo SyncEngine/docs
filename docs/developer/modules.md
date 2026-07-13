@@ -54,6 +54,15 @@ JohnDoe/
                └── UppercaseTask.php
 ```
 
+### Namespace & Autoloading
+
+Required module namespace prefix: `SyncEngine\Module\{#vendor}\{#module}`. Any dependencies, like SDKs and Clients etc., can have their own namespaces.
+
+Composer is not mandatory but recommended to manage module dependencies and autoloading.
+The `register.php` file is called at build time to register module services, which usually just includes the composer autoloader.
+Core autoloader is not included in the build process, so modules must include their own autoloader if they have dependencies.
+Module dependencies are overwritten by the core autoloader if they overlap with the core autoloader.
+
 ---
 
 ## Installing Modules
@@ -68,7 +77,7 @@ Once your module is packaged correctly:
 During installation, SyncEngine will look for an optional `install()` function inside your module’s main class (usually `Module.php`).  
 Likewise, when you uninstall the module, SyncEngine will trigger the `uninstall()` function if present, perfect for cleanup operations or database adjustments.
 
-> **Note:** Always include a pre-built `vendor/` folder in your ZIP so that users do **not** need Composer installed on their servers.
+> **Note:** In case you are using compposer, always include a pre-built `vendor/` folder in your ZIP so that users do **not** need Composer installed on their servers.
 
 ---
 
@@ -99,7 +108,7 @@ JohnDoe/
   "type": "syncengine-module",
   "autoload": {
     "psr-4": {
-      "JohnDoe\\DataTools\\": "src/"
+      "SyncEngine\\Module\\JohnDoe\\DataTools\\": "src/"
     }
   }
 }
@@ -194,7 +203,7 @@ Once installed, this task will automatically appear in the task list under the n
 - **Bundle the `vendor` folder** before zipping the module.  
   This allows installation on systems that do not have Composer installed.
 
-- **Use namespaces** that match your folder structure (e.g., `JohnDoe\DataTools`).
+- **Use namespaces** that match your folder structure (e.g., `SyncEngine\Module\JohnDoe\DataTools`).
 
 - **Keep modules self-contained.**  
   Avoid hard dependencies on other modules unless absolutely necessary.
