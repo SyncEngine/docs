@@ -161,7 +161,7 @@ SyncEngine exposes a REST API for managing core entities (Automations, Flows, Ro
 
 ### Supported Entities
 
-`automation`, `connection`, `flow`, `routine`, `step`, `storage`
+`automation`, `connection`, `flow`, `routine`, `storage`
 
 ### List Entities
 
