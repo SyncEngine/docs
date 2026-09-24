@@ -13,7 +13,7 @@ This is the fastest way to start experimenting locally or in a development envir
 
 > **Repository:** [github.com/SyncEngine/docker](https://github.com/SyncEngine/docker)
 
-### Requirements
+### Docker Requirements
 
 - [Docker](https://docs.docker.com/get-docker/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
@@ -59,11 +59,9 @@ It installs all dependencies, configures your environment, and prepares your ser
 
 > **Repository:** [github.com/SyncEngine/installer](https://github.com/SyncEngine/installer)
 
-### Requirements
+### Install Requirements
 
-- PHP 8.3 or higher
-- Database credentials (MySQL, PostgreSQL, or SQLite)
-- Filesystem access
+All [System Requirements (see below)](#system-requirements)
 
 ### Installation Steps
 
@@ -98,11 +96,8 @@ If you prefer a manual installation or plan to integrate SyncEngine into an exis
 
 ### Requirements
 
-- PHP 8.3 or higher
 - Composer
-- A configured web server (Apache, Nginx, Caddy, etc.)
-- Database connection (MySQL, PostgreSQL, or SQLite)
-
+- All [System Requirements (see below)](#system-requirements)
 
 
 ## Which Method Should You Choose?
@@ -112,6 +107,33 @@ If you prefer a manual installation or plan to integrate SyncEngine into an exis
 | Local development | Docker | Quickest and most reliable for development |
 | Production server | Installer Script | Handles environment and dependencies automatically |
 | Custom integration | Composer | Ideal for developers integrating SyncEngine into an existing project |
+
+## System Requirements
+
+### Webserver
+- A configured web server (Apache, Nginx, Caddy, etc.)
+- Database: SQLite, MySQL/MariaDB, PostgreSQL or other supported by Doctrine v3
+- Filesystem access
+- Docroot set to the `/public` directory of your SyncEngine installation
+- Rewrite enabled on your web server
+
+### PHP
+- PHP version compatible with current Symfony LTS (8.2 or higher > Will jump to 8.4 soon)
+- Minimal PHP extensions required by Symfony and Doctrine, SyncEngine does not enforce additional extensions, but some may be required depending on your configuration and usage.
+
+### PHP INI
+- `memory_limit` should be set to at least 256M. For longer running tasks, consider increasing this limit based on your requirements.
+- `max_execution_time` should be set to a reasonable value (e.g., 30 seconds) to allow for longer-running tasks.
+
+> NOTE: If you are running all automations through CLI commands, you may want to set `max_execution_time` to 0 (unlimited) in your CLI PHP configuration.
+
+> DOCKER: If you are using Docker, these settings can be adjusted in the Dockerfile or docker-compose.yml as needed.
+
+### Resources
+- Enough disk space and memory to store your data. Traces can grow large depending on your configuration and usage.
+- Enough CPU and RAM resources available for the application to run efficiently, especially if you plan to handle large volumes of data or complex workflows.
+
+> Full version requirements: [github.com/SyncEngine/SyncEngine/blob/master/requirements.json](https://github.com/SyncEngine/SyncEngine/blob/master/requirements.json)
 
 ---
 
