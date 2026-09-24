@@ -109,6 +109,7 @@ If you prefer a manual installation or plan to integrate SyncEngine into an exis
 | Custom integration | Composer | Ideal for developers integrating SyncEngine into an existing project |
 
 ## System Requirements
+> Full version requirements: [github.com/SyncEngine/SyncEngine/blob/master/requirements.json](https://github.com/SyncEngine/SyncEngine/blob/master/requirements.json)
 
 ### Webserver
 - A configured web server (Apache, Nginx, Caddy, etc.)
@@ -121,19 +122,17 @@ If you prefer a manual installation or plan to integrate SyncEngine into an exis
 - PHP version compatible with current Symfony LTS (8.2 or higher > Will jump to 8.4 soon)
 - Minimal PHP extensions required by Symfony and Doctrine, SyncEngine does not enforce additional extensions, but some may be required depending on your configuration and usage.
 
-### PHP INI
+#### PHP INI
 - `memory_limit` should be set to at least 256M. For longer running tasks, consider increasing this limit based on your requirements.
 - `max_execution_time` should be set to a reasonable value (e.g., 30 seconds) to allow for longer-running tasks.
 
-> NOTE: If you are running all automations through CLI commands, you may want to set `max_execution_time` to 0 (unlimited) in your CLI PHP configuration.
-
-> DOCKER: If you are using Docker, these settings can be adjusted in the Dockerfile or docker-compose.yml as needed.
+> You are likely running automations through automated processes or cron jobs, which may require longer execution times and higher memory limits.
+> 1. You may want to set `max_execution_time` to 0 (unlimited) in your CLI PHP configuration.
+> 2. You may want to set `memory_limit` to a higher value in your CLI PHP configuration, especially if you are processing large datasets.
 
 ### Resources
 - Enough disk space and memory to store your data. Traces can grow large depending on your configuration and usage.
 - Enough CPU and RAM resources available for the application to run efficiently, especially if you plan to handle large volumes of data or complex workflows.
-
-> Full version requirements: [github.com/SyncEngine/SyncEngine/blob/master/requirements.json](https://github.com/SyncEngine/SyncEngine/blob/master/requirements.json)
 
 ---
 
