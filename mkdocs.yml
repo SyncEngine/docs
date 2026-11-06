@@ -43,6 +43,8 @@ nav:
       - Automations: user/automations.md
       - Flows: user/flows.md
       - Routines: user/routines.md
+      - Variables & Inputs: user/variables.md
+      - Tags: user/tags.md
       - Storages: user/storages.md
       - Best Practices: user/best-practices.md
       - FAQ: user/faq.md
