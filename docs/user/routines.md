@@ -56,7 +56,7 @@ Example use cases for reusable routines:
 | **Name**        | The routine’s identifier used across flows.                                     |
 | **Description** | Optional, describes what the routine does.                                     |
 | **Conditions**  | Optional, set required parameters to triggering this routine                   |
-| **Schema**      | Optional, set input variables and output schema for a more understandable flow |
+| **Schema**      | Optional, set input variables and output schema for a more understandable flow. See [Variables & Inputs](variables.md) for how input values are applied |
 ---
 
 ## Routine Composition Tips
@@ -94,6 +94,7 @@ In other words:
 - [Flows](flows.md) – Learn how routines are organized inside flows.
 - [Tasks](tasks.md) – Explore the types of actions you can add to a routine.
 - [Storages](storages.md) – Store persistent data that routines can access later.
+- [Variables & Inputs](variables.md) – How variables and routine inputs are passed and inherited.
 
 ---
 

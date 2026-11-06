@@ -74,6 +74,11 @@ Specify which data to pass to the triggered workflow.
 **Type**: Key-value pairs (params field) | **Taggable**: Yes | **Collapsed by default**
 
 Define static variables to be used by the triggered workflow. These are merged with any existing variables from the current workflow.
+Every variable you add here overrides an inherited variable with the same name, even when its value is empty.
+
+When the action is **Routine**, the routine's own **input variables** and **input** fields are shown as well.
+Those only override when they are *configured*: empty fields are ignored, tags always count.
+See [Variables & Inputs](../user/variables.md) for the exact rules.
 
 **Examples:**
 - `api_endpoint` = `"https://api.example.com"`
@@ -351,12 +356,12 @@ Use when: Need calculated result from triggered workflow.
 
 - Synchronous triggers can return data, asynchronous cannot
 - Automations with batch/iterator processing always run async
-- Variables from parent workflow are inherited by triggered workflow
+- Variables from parent workflow are inherited by triggered workflow, unless overridden (see [Variables & Inputs](../user/variables.md))
 - Triggered workflows have their own execution context
 - Nested triggers are supported (triggers within triggers)
 - Async triggers are queued for execution but timing is not guaranteed
 - Override data only works with synchronous triggers
 - Empty data can be passed (null, empty arrays, empty objects)
-- The parent workflow's cache is not shared with triggered workflows
+- Synchronous triggers share the cache with the parent workflow; async triggers start with an empty cache
 - Error handling in async triggers must be done within the triggered workflow
 - Triggered automations can access their own connections independently

@@ -11,6 +11,8 @@ Flows bring structure, logic, and flexibility to your automations, allowing you 
 
 A **Flow** is a container that holds a sequence of steps, each triggering a **[Routine](routines.md)** using the output of the previous step or custom input defined by the step configuration. Each routine contains a series of **[Tasks](tasks.md)** that perform actual operations.
 
+Step input and input variables can use the output of earlier steps with `{{ step.<step reference>.field }}`. How these values are applied is explained in [Variables & Inputs](variables.md).
+
 Flows can be triggered by events, schedules, or manually, depending on how your automation is configured.
 
 Think of a Flow as the “pipeline” through which your data travels, from input to output.
@@ -108,6 +110,7 @@ You can preview any routine or task and inspect the resulting data step by step.
 - [Routines](routines.md) – Learn how routines organize tasks.
 - [Automations](automations.md) – See how flows fit within the larger automation structure.
 - [Tasks](tasks.md) – Explore the individual actions that make your flows work.
+- [Variables & Inputs](variables.md) – Pass variables and input to steps.
 
 ---
 
