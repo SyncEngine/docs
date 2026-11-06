@@ -49,6 +49,7 @@ nav:
   - Task Docs:
       - Attempt: tasks/attempt.md
       - Cache: tasks/cache.md
+      - Calculate: tasks/calculate.md
       - Choose: tasks/choose.md
       - Extract: tasks/extract.md
       - Filter: tasks/filter.md
